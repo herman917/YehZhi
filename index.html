@@ -42,7 +42,7 @@
             font-family: 'Noto Sans TC', sans-serif; 
             -webkit-tap-highlight-color: transparent;
             overscroll-behavior-y: none;
-            font-size: 1.05rem; /* 整體字體稍微放大 */
+            font-size: 1.05rem; 
         }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -103,8 +103,8 @@
     <!-- Main Content Area -->
     <main class="flex-1 relative overflow-hidden bg-slate-50">
         
-        <!-- ==================== VIEW 1: HOME (內容) ==================== -->
-        <div id="view-home" class="view-active view-transition pb-24 px-4 pt-4 space-y-5">
+        <!-- ==================== VIEW 1: HOME ==================== -->
+        <div id="view-home" class="view-active view-transition pb-24 px-4 pt-4 space-y-4">
             
             <!-- Hero Banner -->
             <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl p-5 text-white shadow-md relative overflow-hidden">
@@ -116,7 +116,7 @@
                     <p class="text-xs text-brand-100 mb-4 font-medium opacity-90">完全免費 歡迎分享 | 彙編: Herman 2026.10</p>
                     
                     <div class="flex items-center space-x-2">
-                        <!-- Red Heart SVG for 愛 -->
+                        <!-- Solid Red Heart SVG for 愛 -->
                         <div class="relative inline-flex items-center justify-center w-10 h-10">
                             <svg class="absolute inset-0 w-full h-full text-red-500" viewBox="0 0 24 24" fill="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
@@ -131,16 +131,9 @@
                 </div>
             </div>
 
-            <!-- Chapter List -->
+            <!-- Chapter List (Header Removed, Font Enlarged) -->
             <div>
-                <div class="flex items-center justify-between mb-3 px-1">
-                    <h3 class="font-bold text-slate-800 text-base flex items-center">
-                        <i class="fa-solid fa-list-ul text-brand-500 mr-2"></i>
-                        內容
-                    </h3>
-                </div>
-                
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50" id="mobile-toc-list">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50 mt-2" id="mobile-toc-list">
                     <!-- Chapters populated by JS -->
                 </div>
             </div>
@@ -207,7 +200,6 @@
             <div class="space-y-2">
                 <p class="text-xs text-brand-600 font-bold bg-brand-50 px-3 py-1 rounded-full inline-block">標準頻率 120 bpm</p>
                 <h2 class="text-2xl font-black text-slate-800">右腳蹬地吐氣</h2>
-                <!-- Red Warning Text -->
                 <p class="text-red-600 font-bold text-sm mt-1 animate-pulse">會喘的人自行減慢或停下來等不喘了再繼續</p>
             </div>
 
@@ -266,12 +258,10 @@
                 icon: "fa-seedling",
                 content: `
                     <div class="space-y-5">
-                        <!-- Auto-playing YouTube Video -->
                         <div class="rounded-2xl overflow-hidden shadow-sm bg-black aspect-video relative">
                             <iframe id="ch1-video" class="absolute inset-0 w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
 
-                        <!-- 葉子老師是誰 (Moved from Ch2) -->
                         <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
                             <h3 class="font-bold text-brand-900 mb-2 text-lg">【葉子老師是誰】</h3>
                             <p class="text-slate-700 text-base leading-relaxed">
@@ -303,7 +293,6 @@
                 icon: "fa-list-check",
                 content: `
                     <div class="space-y-4">
-                        <!-- 40分鐘懶人包 -->
                         <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 shadow-sm">
                             <h2 class="font-black text-brand-900 text-lg mb-2">全套練功大約 40 分鐘</h2>
                             <ul class="text-base text-brand-800 space-y-2">
@@ -316,14 +305,12 @@
                             </ul>
                         </div>
 
-                        <!-- 直播與社群 -->
                         <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
                             <h3 class="font-bold text-slate-900 text-base mb-2"><i class="fa-brands fa-youtube mr-1 text-red-500"></i>直播與社群規定</h3>
                             <p class="text-sm text-slate-700 mb-2">建議早上 <b>5:50</b> 看直播跟團練到 6:30。排毒效果最佳！(15:00~19:00間看重播也可以，太晚就不適合了)</p>
                             <p class="text-sm font-bold text-red-600 bg-red-50 p-3 rounded-lg border border-red-100">健康群組裡不問安，不貼圖，不問問題，不貼資料！違規者會被踢出群組哦！</p>
                         </div>
 
-                        <!-- 注意事項 -->
                         <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100 shadow-sm">
                             <h3 class="font-bold text-amber-900 text-base mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i>重要注意事項</h3>
                             <ul class="text-sm text-amber-900 space-y-1.5">
@@ -335,7 +322,6 @@
                             </ul>
                         </div>
 
-                        <!-- 筆記精華 (Scrollable) -->
                         <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-72">
                             <div class="bg-slate-50 px-4 py-3 border-b border-slate-200">
                                 <h3 class="font-bold text-slate-900 text-base"><i class="fa-solid fa-book mr-1 text-brand-500"></i>筆記</h3>
@@ -352,7 +338,6 @@
                             </div>
                         </div>
 
-                        <!-- 案例分享 -->
                         <div class="bg-rose-50 p-4 rounded-2xl border border-rose-100 shadow-sm">
                             <h3 class="font-bold text-rose-900 text-base mb-2"><i class="fa-solid fa-star mr-1 text-rose-500"></i>師兄姐案例分享</h3>
                             <ul class="text-sm text-rose-900 space-y-2">
@@ -385,7 +370,6 @@
                             </div>
                         </div>
                         
-                        <!-- Red Warning Text Added -->
                         <div class="bg-red-50 text-red-600 text-base font-bold p-3.5 rounded-xl border border-red-100 text-center animate-pulse">
                             會喘的人自行減慢或停下來等不喘了再繼續
                         </div>
@@ -440,7 +424,6 @@
                             兩腳與肩同寬，重心往前<br>十指抓地，十指交扣掌心向外
                         </div>
                         
-                        <!-- 收功一 -->
                         <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
                             <h3 class="font-black text-brand-700 mb-2 text-lg">收功一 (標準)</h3>
                             <div class="space-y-2 text-base text-slate-700">
@@ -450,7 +433,6 @@
                             </div>
                         </div>
 
-                        <!-- 收功二 -->
                         <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
                             <h3 class="font-bold text-brand-700 mb-2 text-lg">收功二 (適合重病/老年人)</h3>
                             <div class="space-y-2 text-base text-slate-700">
@@ -460,7 +442,6 @@
                             </div>
                         </div>
 
-                        <!-- 收功三 -->
                         <div class="bg-brand-600 p-4 rounded-2xl text-white shadow-sm">
                             <h3 class="font-black text-white mb-2 text-lg">收功三 (小周天進階)</h3>
                             <div class="space-y-2 text-base text-brand-50">
@@ -754,16 +735,16 @@
         function renderTOC() {
             const list = document.getElementById('mobile-toc-list');
             list.innerHTML = chapters.map(ch => `
-                <button onclick="openChapter(${ch.id})" class="w-full flex items-center justify-between py-3.5 px-4 bg-white active:bg-slate-50 transition">
-                    <div class="flex items-center space-x-3 text-left">
-                        <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid ${ch.icon} text-base"></i>
+                <button onclick="openChapter(${ch.id})" class="w-full flex items-center justify-between py-4 px-5 bg-white active:bg-slate-50 transition">
+                    <div class="flex items-center space-x-4 text-left">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                            <i class="fa-solid ${ch.icon} text-xl"></i>
                         </div>
                         <div>
-                            <span class="block font-bold text-slate-900 text-base leading-tight">${ch.title}</span>
+                            <span class="block font-bold text-slate-900 text-lg leading-tight">${ch.title}</span>
                         </div>
                     </div>
-                    <i class="fa-solid fa-chevron-right text-slate-300 text-sm"></i>
+                    <i class="fa-solid fa-chevron-right text-slate-300 text-base"></i>
                 </button>
             `).join('');
         }
