@@ -112,22 +112,22 @@
         <!-- ==================== VIEW 1: HOME ==================== -->
         <div id="view-home" class="view-active view-transition pb-10 px-3 pt-2 space-y-2">
             
-            <!-- Hero Banner -->
-            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-2 px-4 text-white shadow-md relative overflow-hidden">
+            <!-- Hero Banner (高度再縮小一半) -->
+            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-0.5 px-3 text-white shadow-md relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 opacity-10">
                     <i class="fa-solid fa-person-running text-9xl"></i>
                 </div>
                 <div class="relative z-10">
-                    <div class="flex items-center space-x-4">
-                        <!-- Solid Red Heart SVG with White text "愛" -->
-                        <div class="relative inline-flex items-center justify-center w-14 h-14 shrink-0">
+                    <div class="flex items-center space-x-3">
+                        <!-- Solid Red Heart SVG with White text "愛" (配合縮小) -->
+                        <div class="relative inline-flex items-center justify-center w-10 h-10 shrink-0">
                             <svg class="absolute inset-0 w-full h-full text-red-500 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
-                            <span class="relative z-10 text-white font-black text-base drop-shadow-sm">愛</span>
+                            <span class="relative z-10 text-white font-black text-sm drop-shadow-sm">愛</span>
                         </div>
                         <!-- 善良、健康、快樂 -->
-                        <div class="flex items-center space-x-6 text-xl sm:text-2xl font-black tracking-wider text-white">
+                        <div class="flex items-center space-x-5 text-lg sm:text-xl font-black tracking-wider text-white">
                             <span>善良</span>
                             <span>健康</span>
                             <span>快樂</span>
@@ -278,7 +278,7 @@
             },
             {
                 id: 2,
-                title: "快速入門",
+                title: "初學者入門",
                 icon: "fa-list-check",
                 content: `
                     <div class="space-y-3">
@@ -431,8 +431,8 @@
                                 <li><b class="text-red-600">運動中：頭會暈，不要逞強</b>，要停下來，幾天下來沒改善，就要去醫院作檢查。</li>
                                 <li><b>運動後：10-15分鐘內絕對不碰水！</b>體溫未降碰冷水筋脈會縮回。</li>
                                 <li>30分鐘後早餐完，可再睡回籠覺修護細胞。</li>
-                                <li>超慢跑後的熱血湧動是自癒關鍵。</li>
-                                <li>切勿光腳跑，可在瑜珈墊上或穿運動鞋跑。</li>
+                                <li>超慢跑後的熱血湧動是自癒關鍵。老人家冬天更需賴床５分鐘動動手指腳伸展熱身。</li>
+                                <li>請勿光腳跑，可在瑜珈墊上或穿運動鞋跑。</li>
                             </ul>
                         </div>
 
@@ -445,7 +445,7 @@
                          <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
                             <h3 class="font-bold text-slate-900 text-xl mb-1.5 flex items-center"><i class="fa-solid fa-brain text-rose-500 mr-3"></i>心性調整</h3>
                             <p class="text-slate-700 text-lg mb-1 leading-relaxed">急性子、完美主義者，病得早老得快，切記切記！</p>
-                            <p class="text-slate-700 text-lg leading-relaxed">心性要內觀，要平，不要東想西想，怕睡不著，怕生病會不會好。</p>
+                            <p class="text-slate-700 text-lg leading-relaxed">心性要內觀，要平，不要東想西想生病會不會好。</p>
                         </div>
                     </div>
                 `
@@ -476,7 +476,8 @@
                 content: `
                     <div class="space-y-2.5">
                         <div class="bg-slate-800 text-white p-3.5 rounded-2xl shadow-sm sticky top-0 z-10">
-                            <h2 class="font-bold text-xl"><i class="fa-solid fa-list-ul mr-3"></i>點擊下方連結直接開啟 YouTube 觀看</h2>                            
+                            <h2 class="font-bold text-xl"><i class="fa-solid fa-list-ul mr-3"></i>影片集</h2>
+                            <p class="text-sm text-slate-300 mt-0.5">點擊開啟 YouTube </p>
                         </div>
                         
                         <div class="space-y-2 pb-4">
