@@ -104,7 +104,7 @@
     <main class="flex-1 relative overflow-hidden bg-slate-50">
         
         <!-- ==================== VIEW 1: HOME ==================== -->
-        <div id="view-home" class="view-active view-transition pb-24 px-3 pt-2 space-y-2.5">
+        <div id="view-home" class="view-active view-transition pb-10 px-3 pt-2 space-y-2.5">
             
             <!-- Hero Banner -->
             <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-3 px-4 text-white shadow-md relative overflow-hidden">
@@ -112,9 +112,7 @@
                     <i class="fa-solid fa-person-running text-9xl"></i>
                 </div>
                 <div class="relative z-10">
-                    <!-- 標題適度縮小，確保不折行 -->
-                    <h2 class="text-lg sm:text-xl font-bold mb-1 shadow-sm tracking-tight whitespace-nowrap">葉子老師猿猴式超慢跑</h2>
-                    <p class="text-xs text-brand-100 mb-2 font-medium opacity-90">完全免費 歡迎分享 | 彙編: Herman 2026.10</p>
+                    <h2 class="text-lg sm:text-xl font-bold mb-1 shadow-sm tracking-tight whitespace-nowrap">葉子老師猿猴式超慢跑</h2>                  
                     
                     <div class="flex items-center space-x-3">
                         <!-- Solid Red Heart SVG with White text "愛" -->
@@ -155,7 +153,7 @@
             </div>
 
             <!-- Reader Content -->
-            <div id="reader-content" class="p-4 pb-24 max-w-2xl mx-auto space-y-3.5 text-lg">
+            <div id="reader-content" class="p-4 pb-16 max-w-2xl mx-auto space-y-3.5 text-lg">
                 <!-- Content injected by JS -->
             </div>
         </div>
@@ -178,38 +176,8 @@
         </div>
     </div>
 
-    <!-- Mobile Bottom Navigation Bar (Home Only) -->
-    <nav class="glass-nav border-t border-slate-200 px-6 py-2.5 pb-[calc(env(safe-area-inset-bottom)+10px)] flex justify-around items-center shrink-0 z-40 relative">
-        <button onclick="switchView('home')" id="tab-home" class="flex flex-col items-center p-1.5 text-brand-600 transition-colors">
-            <i class="fa-solid fa-house text-2xl mb-0.5"></i>
-            <span class="text-sm font-bold">首頁</span>
-        </button>
-        <button onclick="openSearchModal()" id="tab-search" class="flex flex-col items-center p-1.5 text-slate-400 hover:text-brand-600 transition-colors">
-            <i class="fa-solid fa-magnifying-glass text-2xl mb-0.5"></i>
-            <span class="text-sm font-bold">搜尋</span>
-        </button>
-    </nav>
-
-    <!-- Search Modal -->
-    <div id="search-modal" class="fixed inset-0 bg-slate-50 z-50 transform translate-y-full transition-transform duration-300 flex flex-col">
-        <div class="bg-white px-5 py-3 pt-[calc(env(safe-area-inset-top)+12px)] border-b border-slate-200 shadow-sm flex space-x-3 items-center">
-            <div class="relative flex-1">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400 text-lg"></i>
-                <input type="text" id="search-input" oninput="performSearch(this.value)" placeholder="搜尋口訣、收功..." 
-                       class="w-full bg-slate-100 py-3 pl-12 pr-4 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-brand-500">
-            </div>
-            <button onclick="closeSearchModal()" class="text-lg font-bold text-slate-600 px-2 active:text-brand-600">取消</button>
-        </div>
-        <div id="search-results" class="flex-1 overflow-y-auto p-5 space-y-3">
-            <div class="flex flex-col items-center justify-center h-48 text-slate-400">
-                <i class="fa-solid fa-keyboard text-4xl mb-3 opacity-50"></i>
-                <p class="text-base">輸入關鍵字開始搜尋</p>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Data Structure (已將口訣與收功法整併進初學者入門，並更名)
+        // Data Structure
         const chapters = [
             {
                 id: 1,
@@ -322,8 +290,8 @@
                             <div class="grid grid-cols-2 gap-3">
                                 <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
                                     <i class="fa-solid fa-gauge-high text-3xl text-brand-500 mb-2"></i>
-                                    <h3 class="text-base text-slate-500 font-bold mb-1">跑速次數</h3>
-                                    <p class="text-brand-700 font-black text-2xl">120下/分</p>
+                                    <h3 class="text-base text-slate-500 font-bold mb-1">跑步頻率</h3>
+                                    <p class="text-brand-700 font-black text-2xl">每分鐘140下</p>
                                 </div>
                                 <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
                                     <i class="fa-solid fa-wind text-3xl text-brand-500 mb-2"></i>
@@ -341,16 +309,12 @@
                                 <p class="text-3xl font-black tracking-widest mb-1">蹬地、彈膝、翹臀</p>
                                 <p class="text-3xl font-black tracking-widest">提肛、縮腹、瞪眼</p>
                             </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-100 text-lg text-slate-700 shadow-sm space-y-2">
-                                <p>💡 <b>湧泉穴加溫</b>：利用按摩前腳掌的湧泉穴讓身體內部加溫，血熱軟化血管。</p>
-                                <p>💡 <b>提肛防下垂</b>：慢慢練到每次踏右腳就提一次，提氣防臟腑下垂陰濕。</p>
-                            </div>
                         </div>
 
                         <!-- 收功法區塊整合 -->
                         <div class="space-y-3.5 pt-2">
                             <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 text-lg text-brand-900 text-center font-bold">
-                                兩腳與肩同寬，重心往前<br>十指抓地，十指交扣掌心向外
+                                收功時, 兩腳與肩同寬.。<br>十根腳指微微抓地，十指交扣掌心向外.
                             </div>
                             
                             <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
@@ -394,8 +358,9 @@
                         </div>
 
                         <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-bold text-slate-900 text-xl mb-2 flex items-center"><i class="fa-solid fa-snowflake text-brand-500 mr-3"></i>冷氣設定</h3>
-                            <p class="text-slate-700 text-lg">夏天酷熱，真的受不了, 可開冷氣調至 <b>29.5 度</b>練功。</p>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2 flex items-center"><i class="fa-solid fa-snowflake text-brand-500 mr-3"></i>空調設定</h3>
+                            <p class="text-slate-700 text-lg">電風扇不要直吹。</p>
+                            <p class="text-slate-700 text-lg">夏天酷熱，真的受不了,可開冷氣, 溫度調至 29 度。</p>
                         </div>
 
                          <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
@@ -572,21 +537,16 @@
             
             const viewHome = document.getElementById('view-home');
             const viewReader = document.getElementById('view-reader');
-            const tabHome = document.getElementById('tab-home');
             const ytIframe = document.getElementById('ch1-video');
 
             if (viewName === 'home') {
                 viewHome.classList.replace('view-hidden', 'view-active');
                 viewReader.classList.replace('view-active', 'view-hidden');
-                tabHome.classList.add('text-brand-600');
-                tabHome.classList.remove('text-slate-400');
                 
                 if (ytIframe) ytIframe.src = "";
             } else if (viewName === 'reader') {
                 viewHome.classList.replace('view-active', 'view-hidden');
                 viewReader.classList.replace('view-hidden', 'view-active');
-                tabHome.classList.remove('text-brand-600');
-                tabHome.classList.add('text-slate-400');
                 
                 viewReader.scrollTo({ top: 0, behavior: 'smooth' });
             }
@@ -634,7 +594,6 @@
             `;
 
             switchView('reader');
-            closeSearchModal();
 
             if (id === 1) {
                 const ytIframe = document.getElementById('ch1-video');
@@ -642,59 +601,6 @@
                     ytIframe.src = "https://www.youtube.com/embed/ArK40Oi-UFE?si=c2B6EHzAbmKQHaLx&autoplay=1";
                 }
             }
-        }
-
-        // Search Logic
-        function openSearchModal() {
-            document.getElementById('search-modal').classList.remove('translate-y-full');
-            setTimeout(() => document.getElementById('search-input').focus(), 300);
-        }
-
-        function closeSearchModal() {
-            document.getElementById('search-modal').classList.add('translate-y-full');
-            document.getElementById('search-input').value = '';
-            document.getElementById('search-results').innerHTML = `
-                <div class="flex flex-col items-center justify-center h-48 text-slate-400">
-                    <i class="fa-solid fa-keyboard text-4xl mb-3 opacity-50"></i>
-                    <p class="text-base">輸入關鍵字開始搜尋</p>
-                </div>
-            `;
-        }
-
-        function performSearch(query) {
-            const container = document.getElementById('search-results');
-            if (!query.trim()) {
-                container.innerHTML = `
-                    <div class="flex flex-col items-center justify-center h-48 text-slate-400">
-                        <i class="fa-solid fa-keyboard text-4xl mb-3 opacity-50"></i>
-                        <p class="text-base">輸入關鍵字開始搜尋</p>
-                    </div>`;
-                return;
-            }
-
-            let matches = [];
-            chapters.forEach(ch => {
-                const textContent = ch.content.replace(/<[^>]*>?/gm, '');
-                if (ch.title.includes(query) || ch.subtitle.includes(query) || textContent.includes(query)) {
-                    matches.push(ch);
-                }
-            });
-
-            if (matches.length === 0) {
-                container.innerHTML = `
-                    <div class="flex flex-col items-center justify-center h-48 text-slate-400">
-                        <i class="fa-solid fa-magnifying-glass text-4xl mb-3 opacity-50"></i>
-                        <p class="text-base">找不到「${query}」相關內容</p>
-                    </div>`;
-                return;
-            }
-
-            container.innerHTML = matches.map(m => `
-                <button onclick="openChapter(${m.id})" class="w-full text-left bg-white p-5 rounded-xl shadow-sm border border-slate-100 active:bg-brand-50 transition">
-                    <h4 class="font-bold text-slate-900 text-lg">${m.title}</h4>
-                    <p class="text-base text-slate-500 mt-2 truncate">${m.subtitle}</p>
-                </button>
-            `).join('');
         }
     </script>
 </body>
