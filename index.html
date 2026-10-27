@@ -106,21 +106,21 @@
         <!-- ==================== VIEW 1: HOME ==================== -->
         <div id="view-home" class="view-active view-transition pb-10 px-3 pt-2 space-y-2">
             
-            <!-- Hero Banner (縮小高度、字體加大一號) -->
-            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-2 px-4 text-white shadow-md relative overflow-hidden">
+            <!-- Hero Banner (高度再縮小 2/3) -->
+            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-1 px-3 text-white shadow-md relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 opacity-10">
                     <i class="fa-solid fa-person-running text-9xl"></i>
                 </div>
                 <div class="relative z-10">
                     <div class="flex items-center space-x-4">
-                        <!-- Solid Red Heart SVG with White text "愛" (再加大) -->
-                        <div class="relative inline-flex items-center justify-center w-14 h-14 shrink-0">
+                        <!-- Solid Red Heart SVG with White text "愛" -->
+                        <div class="relative inline-flex items-center justify-center w-12 h-12 shrink-0">
                             <svg class="absolute inset-0 w-full h-full text-red-500 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
-                            <span class="relative z-10 text-white font-black text-lg drop-shadow-sm">愛</span>
+                            <span class="relative z-10 text-white font-black text-base drop-shadow-sm">愛</span>
                         </div>
-                        <!-- 善良、健康、快樂 (字體再加大一號) -->
+                        <!-- 善良、健康、快樂 -->
                         <div class="flex items-center space-x-6 text-xl sm:text-2xl font-black tracking-wider text-white">
                             <span>善良</span>
                             <span>健康</span>
@@ -171,6 +171,22 @@
         </div>
         <div class="flex-1 overflow-y-auto p-2" id="drawer-list">
             <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <!-- Add to Desktop / Homescreen Modal or Alert -->
+    <div id="install-modal" class="fixed inset-0 bg-slate-900/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 text-center">
+            <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900">將 App 加入桌面捷徑</h3>
+            <p id="install-instructions" class="text-slate-600 text-base leading-relaxed">
+                請依照下方提示將本網頁釘選至您的手機或電腦桌面，下次就能夠一鍵秒開！
+            </p>
+            <button onclick="closeInstallModal()" class="w-full py-3.5 bg-brand-600 text-white font-bold rounded-xl shadow-md text-lg active:scale-95 transition">
+                我知道了
+            </button>
         </div>
     </div>
 
@@ -256,7 +272,7 @@
             },
             {
                 id: 2,
-                title: "快速入門",
+                title: "初學者入門",
                 icon: "fa-list-check",
                 content: `
                     <div class="space-y-2.5">
@@ -264,14 +280,10 @@
                         <div class="bg-brand-50 p-3.5 rounded-2xl border border-brand-100 shadow-sm">
                             <h2 class="font-black text-brand-900 text-xl mb-1.5">全套練功大約 40 分鐘</h2>
                             <ul class="text-lg text-brand-800 space-y-1.5 leading-relaxed">
-                                <li class="bg-white/60 p-2 rounded-lg text-base font-bold text-brand-700">可以賴床5分鐘動一動，起床喝 300~500ml 的溫開水</li>
-                                <li class="flex"><span class="w-8 font-bold">1.</span> <span>拉小腿筋，頭正頸直，轉頭(2分鐘)</span></li>
-                                <li class="flex"><span class="w-8 font-bold">2.</span> <span>揹娃娃，拉大腿筋(3分鐘)</span></li>
-                                <li class="flex text-brand-900 font-bold"><span class="w-8">3.</span> <span>原地超慢跑<span class="text-base font-normal text-brand-700">
-                                    <br>30~40分鐘, 按個人體力負荷, 以不喘為原則。
-                                    <br>身體前傾，重心往前，意念在前腳掌，按壓地板。
-                                    <br>左肘往後擺，高度不超過心臟。
-                                    <br>手掌張開握拳，右腳踏地時嘴吐氣。</span></span></li>
+                                <li class="bg-white/60 p-2 rounded-lg text-base font-bold text-brand-700">起床喝 300~500ml 的水，在床上賴床五分鐘拉筋身體回溫。</li>
+                                <li class="flex"><span class="w-8 font-bold">1.</span> <span>拉小腿筋，轉手掌。(2分鐘)</span></li>
+                                <li class="flex"><span class="w-8 font-bold">2.</span> <span>揹娃娃拉大腿筋。(3分鐘)</span></li>
+                                <li class="flex text-brand-900 font-bold"><span class="w-8">3.</span> <span>原地超慢跑。<br><span class="text-base font-normal text-brand-700">(30~40分鐘, 按個人體力負荷, 以不喘為原則, 可以減少時間)<br>左手往後握拳，右腳踏地時嘴吐氣。</span></span></li>
                                 <li class="flex"><span class="w-8 font-bold">4.</span> <span>雙手托天、頂天立地、伸展收功。(3分鐘)</span></li>
                                 <li class="flex"><span class="w-8 font-bold">5.</span> <span>笑笑功</span></li>
                             </ul>
@@ -282,8 +294,8 @@
                             <div class="grid grid-cols-2 gap-2.5">
                                 <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center">
                                     <i class="fa-solid fa-gauge-high text-3xl text-brand-500 mb-1"></i>
-                                    <h3 class="text-base text-slate-500 font-bold mb-0.5">步頻</h3>
-                                    <p class="text-brand-700 font-black text-2xl">每分鐘140</p>
+                                    <h3 class="text-base text-slate-500 font-bold mb-0.5">跑步頻率</h3>
+                                    <p class="text-brand-700 font-black text-2xl">每分鐘140下</p>
                                 </div>
                                 <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center">
                                     <i class="fa-solid fa-wind text-3xl text-brand-500 mb-1"></i>
@@ -501,6 +513,14 @@
                                 <p class="text-center text-sm text-rose-600 mt-2.5 font-black">違規者會被踢出群組哦！</p>
                             </div>
                         </div>
+
+                        <!-- 加入桌面捷徑按鈕 (置於最下方) -->
+                        <div class="pt-2">
+                            <button onclick="showInstallHelp()" class="w-full py-4 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform flex items-center justify-center space-x-3 text-lg">
+                                <i class="fa-solid fa-arrow-up-from-bracket text-xl"></i>
+                                <span>📱 將本 App 加入手機/電腦桌面</span>
+                            </button>
+                        </div>
                     </div>
                 `
             }
@@ -588,7 +608,6 @@
             
             document.getElementById('reader-chapter-title').innerText = chapter.title;
             
-            // 已移除內文最上方重複出現的大標題與副標題
             document.getElementById('reader-content').innerHTML = `
                 ${chapter.content}
             `;
@@ -601,6 +620,26 @@
                     ytIframe.src = "https://www.youtube.com/embed/ArK40Oi-UFE?si=c2B6EHzAbmKQHaLx&autoplay=1";
                 }
             }
+        }
+
+        // 顯示加入桌面提示
+        function showInstallHelp() {
+            const modal = document.getElementById('install-modal');
+            const instructions = document.getElementById('install-instructions');
+            
+            const userAgent = navigator.userAgent.toLowerCase();
+            if (/iphone|ipad|ipod/.test(userAgent)) {
+                instructions.innerHTML = "<b>iPhone / iPad (Safari) 操作方式：</b><br>請點擊下方工具列的 <b>「分享」</b> 按鈕（正方形帶箭頭），然後選擇 <b>「加入主畫面」</b> 即可！";
+            } else if (/android/.test(userAgent)) {
+                instructions.innerHTML = "<b>Android (Chrome) 操作方式：</b><br>請點擊右上角的 <b>「三點選單」</b>，然後選擇 <b>「加到主畫面」</b> 或 <b>「安裝應用程式」</b> 即可！";
+            } else {
+                instructions.innerHTML = "<b>電腦版操作方式：</b><br>請按鍵盤快捷鍵 <b>Ctrl + D</b>（Windows）或 <b>Cmd + D</b>（Mac）將本網頁加入我的最愛，或透過瀏覽器選單選擇「安裝應用程式」！";
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeInstallModal() {
+            document.getElementById('install-modal').classList.add('hidden');
         }
     </script>
 </body>
