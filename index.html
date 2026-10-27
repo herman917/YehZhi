@@ -38,9 +38,9 @@
         }
     </script>
     <style>
-        /* 加大基礎字級，讓 Tailwind 的 rem 單位自動放大所有元素，適合長輩閱讀 */
+        /* 長輩友善大字體 */
         html {
-            font-size: 18px; 
+            font-size: 19px; 
         }
         body { 
             font-family: 'Noto Sans TC', sans-serif; 
@@ -82,13 +82,13 @@
 </head>
 <body class="bg-slate-50 h-full flex flex-col text-slate-800 antialiased overflow-hidden selection:bg-brand-200">
 
-    <!-- Mobile App Header (Removed Timer Button) -->
-    <header class="glass-nav border-b border-brand-100 z-30 px-4 py-3 pt-[calc(env(safe-area-inset-top)+12px)] flex items-center justify-between shrink-0 shadow-sm">
-        <div class="flex items-center space-x-4">
-            <button onclick="toggleDrawer()" class="w-12 h-12 flex items-center justify-center text-slate-600 active:bg-slate-100 rounded-full">
+    <!-- Mobile App Header -->
+    <header class="glass-nav border-b border-brand-100 z-30 px-4 py-2 pt-[calc(env(safe-area-inset-top)+8px)] flex items-center justify-between shrink-0 shadow-sm">
+        <div class="flex items-center space-x-3">
+            <button onclick="toggleDrawer()" class="w-11 h-11 flex items-center justify-center text-slate-600 active:bg-slate-100 rounded-full">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
-            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm bg-brand-50 flex items-center justify-center shrink-0">
+            <div class="w-11 h-11 rounded-full overflow-hidden border-2 border-white shadow-sm bg-brand-50 flex items-center justify-center shrink-0">
                 <!-- YouTube High-Res Avatar -->
                 <img src="https://yt3.googleusercontent.com/vv6Bh-b4K7sKGd20_tkqAWPztGhDU3t6cog2FoKqgNZW4NN1-BukrlKaAc-6UMZ1Ivyh10BH=s160-c-k-c0x00ffffff-no-rj"
                      onerror="this.src='https://placehold.co/50x50/0284c7/ffffff?text=葉子'" 
@@ -104,36 +104,36 @@
     <main class="flex-1 relative overflow-hidden bg-slate-50">
         
         <!-- ==================== VIEW 1: HOME ==================== -->
-        <div id="view-home" class="view-active view-transition pb-24 px-4 pt-4 space-y-4">
+        <div id="view-home" class="view-active view-transition pb-24 px-4 pt-3 space-y-3">
             
-            <!-- Hero Banner -->
-            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl p-6 text-white shadow-md relative overflow-hidden">
+            <!-- Hero Banner (間距與高度減少約 1/3，字體大小不變) -->
+            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-4 px-5 text-white shadow-md relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 opacity-10">
                     <i class="fa-solid fa-person-running text-9xl"></i>
                 </div>
                 <div class="relative z-10">
-                    <h2 class="text-3xl font-bold mb-2 shadow-sm tracking-tight">葉子老師猿猴式超慢跑</h2>
-                    <p class="text-sm text-brand-100 mb-5 font-medium opacity-90">完全免費 歡迎分享 | 彙編: Herman 2026.10</p>
+                    <h2 class="text-3xl font-bold mb-1 shadow-sm tracking-tight">葉子老師猿猴式超慢跑</h2>
+                    <p class="text-sm text-brand-100 mb-3 font-medium opacity-90">完全免費 歡迎分享 | 彙編: Herman 2026.10</p>
                     
                     <div class="flex items-center space-x-3">
-                        <!-- Solid Red Heart SVG for 愛 (Enlarged) -->
-                        <div class="relative inline-flex items-center justify-center w-12 h-12">
+                        <!-- Solid Red Heart SVG with White text "愛" -->
+                        <div class="relative inline-flex items-center justify-center w-11 h-11">
                             <svg class="absolute inset-0 w-full h-full text-red-500 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
                             <span class="relative z-10 text-white font-black text-sm drop-shadow-sm">愛</span>
                         </div>
                         <!-- Blue Tags (Enlarged) -->
-                        <span class="bg-brand-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-sm">善良</span>
-                        <span class="bg-brand-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-sm">健康</span>
-                        <span class="bg-brand-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-sm">快樂</span>
+                        <span class="bg-brand-500 text-white px-4 py-1.5 rounded-full text-base font-bold shadow-sm">善良</span>
+                        <span class="bg-brand-500 text-white px-4 py-1.5 rounded-full text-base font-bold shadow-sm">健康</span>
+                        <span class="bg-brand-500 text-white px-4 py-1.5 rounded-full text-base font-bold shadow-sm">快樂</span>
                     </div>
                 </div>
             </div>
 
             <!-- Chapter List -->
             <div>
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50 mt-2" id="mobile-toc-list">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50 mt-1" id="mobile-toc-list">
                     <!-- Chapters populated by JS -->
                 </div>
             </div>
@@ -142,7 +142,7 @@
         <!-- ==================== VIEW 2: READER (閱讀器) ==================== -->
         <div id="view-reader" class="view-hidden view-transition bg-white">
             <!-- Reader Header (Sticky) -->
-            <div class="sticky top-0 bg-white/95 backdrop-blur z-20 border-b border-slate-100 px-3 py-4 flex items-center justify-between shadow-sm">
+            <div class="sticky top-0 bg-white/95 backdrop-blur z-20 border-b border-slate-100 px-3 py-3 flex items-center justify-between shadow-sm">
                 <button onclick="switchView('home')" class="px-3 py-2 flex items-center text-slate-600 hover:text-brand-600 rounded-lg active:bg-slate-50 font-bold text-lg">
                     <i class="fa-solid fa-chevron-left mr-2"></i> 返回首頁
                 </button>
@@ -152,7 +152,7 @@
             </div>
 
             <!-- Reader Content -->
-            <div id="reader-content" class="p-6 pb-24 max-w-2xl mx-auto space-y-6 text-lg">
+            <div id="reader-content" class="p-5 pb-24 max-w-2xl mx-auto space-y-4 text-lg">
                 <!-- Content injected by JS -->
             </div>
         </div>
@@ -164,32 +164,32 @@
     
     <!-- Side Drawer Navigation -->
     <div id="drawer-menu" class="fixed inset-y-0 left-0 w-80 bg-white z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
-        <div class="p-6 border-b border-slate-100 bg-brand-50 pt-[calc(env(safe-area-inset-top)+20px)] flex justify-between items-center">
+        <div class="p-5 border-b border-slate-100 bg-brand-50 pt-[calc(env(safe-area-inset-top)+16px)] flex justify-between items-center">
             <h2 class="font-black text-brand-900 text-2xl">目錄</h2>
             <button onclick="toggleDrawer()" class="w-10 h-10 rounded-full bg-white text-slate-600 flex items-center justify-center shadow-sm">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
-        <div class="flex-1 overflow-y-auto p-3" id="drawer-list">
+        <div class="flex-1 overflow-y-auto p-2" id="drawer-list">
             <!-- Populated by JS -->
         </div>
     </div>
 
     <!-- Mobile Bottom Navigation Bar (Home Only) -->
-    <nav class="glass-nav border-t border-slate-200 px-6 py-3 pb-[calc(env(safe-area-inset-bottom)+12px)] flex justify-around items-center shrink-0 z-40 relative">
-        <button onclick="switchView('home')" id="tab-home" class="flex flex-col items-center p-2 text-brand-600 transition-colors">
-            <i class="fa-solid fa-house text-2xl mb-1"></i>
+    <nav class="glass-nav border-t border-slate-200 px-6 py-2.5 pb-[calc(env(safe-area-inset-bottom)+10px)] flex justify-around items-center shrink-0 z-40 relative">
+        <button onclick="switchView('home')" id="tab-home" class="flex flex-col items-center p-1.5 text-brand-600 transition-colors">
+            <i class="fa-solid fa-house text-2xl mb-0.5"></i>
             <span class="text-sm font-bold">首頁</span>
         </button>
-        <button onclick="openSearchModal()" id="tab-search" class="flex flex-col items-center p-2 text-slate-400 hover:text-brand-600 transition-colors">
-            <i class="fa-solid fa-magnifying-glass text-2xl mb-1"></i>
+        <button onclick="openSearchModal()" id="tab-search" class="flex flex-col items-center p-1.5 text-slate-400 hover:text-brand-600 transition-colors">
+            <i class="fa-solid fa-magnifying-glass text-2xl mb-0.5"></i>
             <span class="text-sm font-bold">搜尋</span>
         </button>
     </nav>
 
     <!-- Search Modal -->
     <div id="search-modal" class="fixed inset-0 bg-slate-50 z-50 transform translate-y-full transition-transform duration-300 flex flex-col">
-        <div class="bg-white px-5 py-4 pt-[calc(env(safe-area-inset-top)+16px)] border-b border-slate-200 shadow-sm flex space-x-3 items-center">
+        <div class="bg-white px-5 py-3 pt-[calc(env(safe-area-inset-top)+12px)] border-b border-slate-200 shadow-sm flex space-x-3 items-center">
             <div class="relative flex-1">
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400 text-lg"></i>
                 <input type="text" id="search-input" oninput="performSearch(this.value)" placeholder="搜尋口訣、收功..." 
@@ -206,39 +206,90 @@
     </div>
 
     <script>
-        // Data Structure for the 8 Chapters
+        // Data Structure (已移除老師語錄章節，並將全部語錄整合至葉子老師下方)
         const chapters = [
             {
                 id: 1,
                 title: "葉子老師",
-                subtitle: "健康心法與生命哲學",
+                subtitle: "健康心法、生命哲學與經典語錄",
                 icon: "fa-seedling",
                 content: `
-                    <div class="space-y-6">
+                    <div class="space-y-4">
                         <div class="rounded-2xl overflow-hidden shadow-sm bg-black aspect-video relative">
                             <iframe id="ch1-video" class="absolute inset-0 w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
 
                         <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-bold text-brand-900 mb-3 text-xl">【葉子老師是誰】</h3>
+                            <h3 class="font-bold text-brand-900 mb-2 text-xl">【葉子老師是誰】</h3>
                             <p class="text-slate-700 text-lg leading-relaxed">
                                 25年的心靈講師資歷、20年的健康養生資歷。古法活筋氣功創辦人、企管顧問公司講師、三代地理世家。看葉子老師的臉書，會發現他真的越來越年輕呢！
                             </p>
                         </div>
 
-                        <div class="bg-gradient-to-r from-brand-600 to-blue-700 text-white p-6 rounded-2xl shadow-sm">
+                        <div class="bg-gradient-to-r from-brand-600 to-blue-700 text-white p-5 rounded-2xl shadow-sm">
                             <span class="bg-white/20 text-sm px-3 py-1 rounded font-bold uppercase tracking-wider">核心哲學</span>
-                            <h2 class="text-2xl font-black mt-3 leading-tight">聽懂健康 才能啟動美好</h2>
-                            <p class="text-brand-100 text-base mt-3 leading-relaxed">「所有生病的人都不善良，回家把枕頭墊高，寫出自己十大罪狀。」</p>
+                            <h2 class="text-2xl font-black mt-2 leading-tight">聽懂健康 才能啟動美好</h2>
+                            <p class="text-brand-100 text-lg mt-2 leading-relaxed">「所有生病的人都不善良，回家把枕頭墊高，寫出自己十大罪狀。」</p>
                         </div>
                         
                         <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                             <h3 class="font-bold text-slate-900 mb-3 text-xl flex items-center"><i class="fa-solid fa-heart-pulse text-brand-500 mr-3"></i>醫學與身體觀念</h3>
-                            <ul class="text-slate-700 text-lg space-y-3 list-disc pl-6">
+                            <ul class="text-slate-700 text-lg space-y-2 list-disc pl-6">
                                 <li>現代醫學多具經濟考量，藥物只是控制，止痛藥是麻痺。</li>
                                 <li>要學會聽身體的聲音，不是全聽醫生的。</li>
                                 <li>腫瘤是不通、阻塞造成的，有熱情才有動力。</li>
                             </ul>
+                        </div>
+
+                        <!-- 整合老師語錄區塊 -->
+                        <div class="pt-2">
+                            <h3 class="font-bold text-brand-900 mb-3 text-xl flex items-center"><i class="fa-solid fa-quote-left text-brand-500 mr-3"></i>老師經典金句語錄</h3>
+                            <div class="space-y-3">
+                                ${[
+                                    "筋脈緊縮是萬病之源.",
+                                    "身體缺氧是百病之根.",
+                                    "自律神經失調是病變之首.",
+                                    "哪裡卡住了, 有時自己都不知道.",
+                                    "陽氣足了, 身體自動會修復.",
+                                    "身體沒有陽氣, 吃什麼補藥、補品都沒有用(沒辦法吸收).",
+                                    "一部車子的CC數是按照需要來設計的, 人體也是, 體重多少就多少.",
+                                    "晚上只吃菜不吃飯, 小心濕寒.",
+                                    "身體濕寒,最毒!!",
+                                    "愛的症狀因練功體重變輕或指數變高不要怕, 是在排毒.",
+                                    "腹中食少, 心中事少.",
+                                    "四顆種子：善良、愛、健康、快樂.",
+                                    "肌肉的能量 是 脂肪的 10倍.",
+                                    "虛領頂頸含胸拔背、沉肩垂肘、松腰墜胯, 頭部正直, 頸肌鬆弛,頭部懸起感覺.",
+                                    "修復力有 4層 表層，裡層，內層，深層.",
+                                    "有練-->老樣子; 沒練-->樣子老.",
+                                    "人體每個細胞有記憶力.",
+                                    "雙手托天 理三焦.",
+                                    "禪字, 左邊示 右邊單 簡單就是禪.",
+                                    "人字兩撇，最好寫,但是最複雜的動物.",
+                                    "簡單的事 重複做 就是專家.",
+                                    "心無罣礙, 身體還陽, 平衡, 就沒事!",
+                                    "救急靠醫生, 健康靠自己.",
+                                    "經是主幹道, 絡是微血管.",
+                                    "計較是墮落的開始, 比較是痛苦的深淵.",
+                                    "三等人: 等吃飯, 等吃藥, 等睡覺.",
+                                    "肺愛深呼吸, 肝愛伸懶腰, 腎愛踮腳尖.",
+                                    "血管 10 萬公里, 地球一周 4 萬公里, 是 2.5 倍.",
+                                    "人體內太空有60 兆個細胞,再加上好菌和壞菌, 多達 200兆,  比銀河系1000億顆星球還多.",
+                                    "身體要的是平衡，陰陽平衡才會健康.",
+                                    "月芽6-8個最好，過多太躁，容易高血壓甲狀腺亢進，過少太虛，虛不受補.",
+                                    "100天, 脫胎換骨(皮膚更新 1 個月, 肝更新 1 季...).",
+                                    "哪裡痛, 就往哪裡伸展.",
+                                    "身體前傾, 肩膀後張, 屁股後翹, 手肘後擺 (只有手肘用力, 其他都放鬆).",
+                                    "猿猴式走路應用在平常生活中, 洗臉刷牙, 逛市場.",
+                                    "把該忘的忘掉是智慧.",
+                                    "健康有 五成是自己的心性造成.",
+                                    "完美主義者老的快 病的早."
+                                ].map(quote => `
+                                    <div class="bg-white p-4 rounded-xl border-l-4 border-brand-500 shadow-sm">
+                                        <p class="text-lg font-medium text-slate-800 leading-relaxed">${quote}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
                         </div>
                     </div>
                 `
@@ -249,11 +300,10 @@
                 subtitle: "全套練功時間與重要注意事項",
                 icon: "fa-list-check",
                 content: `
-                    <div class="space-y-6">
-                        <!-- 40分鐘懶人包 -->
+                    <div class="space-y-4">
                         <div class="bg-brand-50 p-5 rounded-2xl border border-brand-100 shadow-sm">
-                            <h2 class="font-black text-brand-900 text-xl mb-4">全套練功大約 40 分鐘</h2>
-                            <ul class="text-lg text-brand-800 space-y-3">
+                            <h2 class="font-black text-brand-900 text-xl mb-3">全套練功大約 40 分鐘</h2>
+                            <ul class="text-lg text-brand-800 space-y-2.5">
                                 <li class="bg-white/60 p-3 rounded-lg text-base font-bold text-brand-700">起床喝 300~500ml 的水，在床上賴床五分鐘拉筋身體回溫。</li>
                                 <li class="flex"><span class="w-8 font-bold">1.</span> <span>拉小腿筋，轉手掌。(2分鐘)</span></li>
                                 <li class="flex"><span class="w-8 font-bold">2.</span> <span>揹娃娃拉大腿筋。(3分鐘)</span></li>
@@ -263,10 +313,9 @@
                             </ul>
                         </div>
 
-                        <!-- 整合的注意事項 -->
                         <div class="bg-amber-50 border border-amber-200 p-5 rounded-2xl shadow-sm">
                             <h3 class="font-bold text-amber-900 text-xl mb-3 flex items-center"><i class="fa-solid fa-droplet mr-3"></i>飲水與洗澡禁忌</h3>
-                            <ul class="text-amber-900 text-lg space-y-3 list-disc pl-6">                                
+                            <ul class="text-amber-900 text-lg space-y-2.5 list-disc pl-6">                                
                                 <li><b>運動前：</b>早起空腹喝 300~500cc 溫開水後開始。(有慢性病患可先進食)</li>
                                 <li><b class="text-red-600">運動中：頭會暈，不要逞強</b>，要停下來，幾天下來沒改善，就要去醫院作檢查。</li>
                                 <li><b>運動後：10-15分鐘內絕對不碰水！</b>體溫未降碰冷水筋脈會縮回。</li>
@@ -295,16 +344,16 @@
                 subtitle: "次數、姿勢與呼吸法",
                 icon: "fa-person-running",
                 content: `
-                    <div class="space-y-6">
+                    <div class="space-y-4">
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-center">
-                                <i class="fa-solid fa-gauge-high text-4xl text-brand-500 mb-3"></i>
-                                <h3 class="text-base text-slate-500 font-bold mb-2">跑速次數</h3>
+                                <i class="fa-solid fa-gauge-high text-4xl text-brand-500 mb-2"></i>
+                                <h3 class="text-base text-slate-500 font-bold mb-1">跑速次數</h3>
                                 <p class="text-brand-700 font-black text-2xl">120下/分</p>
                             </div>
                             <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-center">
-                                <i class="fa-solid fa-wind text-4xl text-brand-500 mb-3"></i>
-                                <h3 class="text-base text-slate-500 font-bold mb-2">呼吸配合</h3>
+                                <i class="fa-solid fa-wind text-4xl text-brand-500 mb-2"></i>
+                                <h3 class="text-base text-slate-500 font-bold mb-1">呼吸配合</h3>
                                 <p class="text-brand-700 font-black text-xl leading-tight">右腳踏地<br>吐氣提肛</p>
                             </div>
                         </div>
@@ -313,12 +362,12 @@
                             會喘的人自行減慢或停下來等不喘了再繼續
                         </div>
 
-                        <div class="bg-gradient-to-br from-brand-600 to-blue-600 p-6 rounded-2xl text-white shadow-sm text-center">
-                            <h3 class="text-base font-bold text-brand-200 mb-3 uppercase tracking-widest">六大姿勢口訣</h3>
-                            <p class="text-3xl font-black tracking-widest mb-2">蹬地、彈膝、翹臀</p>
+                        <div class="bg-gradient-to-br from-brand-600 to-blue-600 p-5 rounded-2xl text-white shadow-sm text-center">
+                            <h3 class="text-base font-bold text-brand-200 mb-2 uppercase tracking-widest">六大姿勢口訣</h3>
+                            <p class="text-3xl font-black tracking-widest mb-1">蹬地、彈膝、翹臀</p>
                             <p class="text-3xl font-black tracking-widest">提肛、縮腹、瞪眼</p>
                         </div>
-                        <div class="bg-white p-5 rounded-2xl border border-slate-100 text-lg text-slate-700 shadow-sm space-y-3">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-100 text-lg text-slate-700 shadow-sm space-y-2">
                             <p>💡 <b>湧泉穴加溫</b>：利用按摩前腳掌的湧泉穴讓身體內部加溫，血熱軟化血管。</p>
                             <p>💡 <b>提肛防下垂</b>：慢慢練到每次踏右腳就提一次，提氣防臟腑下垂陰濕。</p>
                         </div>
@@ -331,14 +380,14 @@
                 subtitle: "收納氣血與小周天",
                 icon: "fa-hands-praying",
                 content: `
-                    <div class="space-y-6">
+                    <div class="space-y-4">
                         <div class="bg-brand-50 p-5 rounded-2xl border border-brand-100 text-lg text-brand-900 text-center font-bold">
                             兩腳與肩同寬，重心往前<br>十指抓地，十指交扣掌心向外
                         </div>
                         
                         <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-black text-brand-700 mb-3 text-xl">收功一 (標準)</h3>
-                            <div class="space-y-3 text-lg text-slate-700">
+                            <h3 class="font-black text-brand-700 mb-2 text-xl">收功一 (標準)</h3>
+                            <div class="space-y-2.5 text-lg text-slate-700">
                                 <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛。意念黃光從眉心吸到丹田鎖住。</p>
                                 <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>意守下丹田。</p>
                                 <p><span class="font-bold text-red-500">吐氣(6秒)：</span>手往下，縮小腹，提肛，舌頂上顎放。<span class="text-red-600 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
@@ -346,8 +395,8 @@
                         </div>
 
                         <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-bold text-brand-700 mb-3 text-xl">收功二 (適合重病/老年人)</h3>
-                            <div class="space-y-3 text-lg text-slate-700">
+                            <h3 class="font-bold text-brand-700 mb-2 text-xl">收功二 (適合重病/老年人)</h3>
+                            <div class="space-y-2.5 text-lg text-slate-700">
                                 <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛，吸5-7分飽。意守下丹田(黃色金光)。</p>
                                 <p><span class="font-bold text-red-500">吐氣：</span>手往下，縮小腹，提肛。<span class="text-red-600 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
                                 <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>放。</p>
@@ -355,8 +404,8 @@
                         </div>
 
                         <div class="bg-brand-600 p-5 rounded-2xl text-white shadow-sm">
-                            <h3 class="font-black text-white mb-3 text-xl">收功三 (小周天進階)</h3>
-                            <div class="space-y-3 text-lg text-brand-50">
+                            <h3 class="font-black text-white mb-2 text-xl">收功三 (小周天進階)</h3>
+                            <div class="space-y-2.5 text-lg text-brand-50">
                                 <p><b>吸氣：</b>手上舉，<b>要提肛</b>。意念引導黃光從眉心➔丹田➔尾閭➔海底輪➔頭頂360度➔舌頂下顎➔意念往下喉嚨➔丹田鎖住。</p>
                                 <p><b>吐氣：</b>縮小腹，<b>不提肛 (肛門放掉)</b>。<span class="text-amber-300 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
                             </div>
@@ -370,14 +419,14 @@
                 subtitle: "每天早上05:50開播",
                 icon: "fa-brands fa-youtube",
                 content: `
-                    <div class="flex flex-col items-center justify-center py-10 text-center space-y-5">
+                    <div class="flex flex-col items-center justify-center py-8 text-center space-y-4">
                         <div class="w-28 h-28 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-6xl shadow-sm mb-2">
                             <i class="fa-brands fa-youtube"></i>
                         </div>
                         <h2 class="text-3xl font-black text-slate-800">葉子老師健康講座</h2>
                         <p class="text-slate-600 text-lg">每天早上 05:50 準時開播</p>
                         
-                        <a href="https://www.youtube.com/results?search_query=葉子老師健康講座" target="_blank" class="w-full mt-8 py-5 bg-red-600 text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform flex items-center justify-center space-x-3 text-xl">
+                        <a href="https://www.youtube.com/results?search_query=葉子老師健康講座" target="_blank" class="w-full mt-6 py-4 bg-red-600 text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform flex items-center justify-center space-x-3 text-xl">
                             <i class="fa-brands fa-youtube text-2xl"></i>
                             <span>前往訂閱頻道</span>
                         </a>
@@ -390,29 +439,29 @@
                 subtitle: "葉子老師健康研習營",
                 icon: "fa-brands fa-line",
                 content: `
-                    <div class="space-y-8">
-                        <div class="flex flex-col items-center justify-center pt-6 text-center">
-                            <div class="w-24 h-24 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-5xl shadow-sm mb-4">
+                    <div class="space-y-6">
+                        <div class="flex flex-col items-center justify-center pt-4 text-center">
+                            <div class="w-24 h-24 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-5xl shadow-sm mb-3">
                                 <i class="fa-brands fa-line"></i>
                             </div>
                             <h2 class="text-3xl font-black text-slate-800">葉子老師健康研習營</h2>
                         </div>
 
                         <!-- 點擊加入 Line 社群按鈕 -->
-                        <a href="https://line.me/ti/g2/Z0TU4ICnw4g7QBM3eYLWWHo_8NBYUrH-S2TCkg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" class="w-full py-5 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform flex items-center justify-center space-x-3 text-xl">
+                        <a href="https://line.me/ti/g2/Z0TU4ICnw4g7QBM3eYLWWHo_8NBYUrH-S2TCkg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" class="w-full py-4 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform flex items-center justify-center space-x-3 text-xl">
                             <i class="fa-brands fa-line text-3xl"></i>
                             <span>點擊加入 Line 社群</span>
                         </a>
 
-                        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-6 shadow-sm">
-                            <h3 class="font-bold text-rose-700 mb-4 text-center text-xl">⚠️ 社群嚴格規範 ⚠️</h3>
+                        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-5 shadow-sm">
+                            <h3 class="font-bold text-rose-700 mb-3 text-center text-xl">⚠️ 社群嚴格規範 ⚠️</h3>
                             <div class="grid grid-cols-2 gap-3 text-base text-rose-900 text-center font-bold">
                                 <div class="bg-white py-3 rounded-xl border border-rose-100 shadow-sm">❌ 不問安</div>
                                 <div class="bg-white py-3 rounded-xl border border-rose-100 shadow-sm">❌ 不貼圖</div>
                                 <div class="bg-white py-3 rounded-xl border border-rose-100 shadow-sm">❌ 不問問題</div>
                                 <div class="bg-white py-3 rounded-xl border border-rose-100 shadow-sm">❌ 不貼廣告/影片</div>
                             </div>
-                            <p class="text-center text-base text-rose-600 mt-4 font-black">違規者會被踢出群組哦！</p>
+                            <p class="text-center text-base text-rose-600 mt-3 font-black">違規者會被踢出群組哦！</p>
                         </div>
                     </div>
                 `
@@ -423,13 +472,13 @@
                 subtitle: "完整YouTube實用教學連結",
                 icon: "fa-video",
                 content: `
-                    <div class="space-y-5">
-                        <div class="bg-slate-800 text-white p-5 rounded-2xl shadow-sm sticky top-0 z-10">
+                    <div class="space-y-4">
+                        <div class="bg-slate-800 text-white p-4 rounded-2xl shadow-sm sticky top-0 z-10">
                             <h2 class="font-bold text-xl"><i class="fa-solid fa-list-ul mr-3"></i>教學影片完整收錄</h2>
-                            <p class="text-sm text-slate-300 mt-2">點擊下方連結直接開啟 YouTube 觀看</p>
+                            <p class="text-sm text-slate-300 mt-1">點擊下方連結直接開啟 YouTube 觀看</p>
                         </div>
                         
-                        <div class="space-y-3 pb-6">
+                        <div class="space-y-3 pb-4">
                             ${[
                                 {title:"7大功效", url:"https://share.google/1jHIGmcjr9wO9lKhP"},
                                 {title:"超慢跑要領", url:"https://youtube.com/shorts/lokI4AoJdRM?si=TxzV-7UnSPm98yeg"},
@@ -495,60 +544,6 @@
                         </div>
                     </div>
                 `
-            },
-            {
-                id: 8,
-                title: "老師語錄",
-                subtitle: "經典金句隨身看",
-                icon: "fa-quote-left",
-                content: `
-                    <div class="space-y-4">
-                        ${[
-                            "筋脈緊縮是萬病之源.",
-                            "身體缺氧是百病之根.",
-                            "自律神經失調是病變之首.",
-                            "哪裡卡住了, 有時自己都不知道.",
-                            "陽氣足了, 身體自動會修復.",
-                            "身體沒有陽氣, 吃什麼補藥、補品都沒有用(沒辦法吸收).",
-                            "一部車子的CC數是按照需要來設計的, 人體也是, 體重多少就多少.",
-                            "晚上只吃菜不吃飯, 小心濕寒.",
-                            "身體濕寒,最毒!!",
-                            "愛的症狀因練功體重變輕或指數變高不要怕, 是在排毒.",
-                            "腹中食少, 心中事少.",
-                            "四顆種子：善良、愛、健康、快樂.",
-                            "肌肉的能量 是 脂肪的 10倍.",
-                            "虛領頂頸含胸拔背、沉肩垂肘、松腰墜胯, 頭部正直, 頸肌鬆弛,頭部懸起感覺.",
-                            "修復力有 4層 表層，裡層，內層，深層.",
-                            "有練-->老樣子; 沒練-->樣子老.",
-                            "人體每個細胞有記憶力.",
-                            "雙手托天 理三焦.",
-                            "禪字, 左邊示 右邊單 簡單就是禪.",
-                            "人字兩撇，最好寫,但是最複雜的動物.",
-                            "簡單的事 重複做 就是專家.",
-                            "心無罣礙, 身體還陽, 平衡, 就沒事!",
-                            "救急靠醫生, 健康靠自己.",
-                            "經是主幹道, 絡是微血管.",
-                            "計較是墮落的開始, 比較是痛苦的深淵.",
-                            "三等人: 等吃飯, 等吃藥, 等睡覺.",
-                            "肺愛深呼吸, 肝愛伸懶腰, 腎愛踮腳尖.",
-                            "血管 10 萬公里, 地球一周 4 萬公里, 是 2.5 倍.",
-                            "人體內太空有60 兆個細胞,再加上好菌和壞菌, 多達 200兆,  比銀河系1000億顆星球還多.",
-                            "身體要的是平衡，陰陽平衡才會健康.",
-                            "月芽6-8個最好，過多太躁，容易高血壓甲狀腺亢進，過少太虛，虛不受補.",
-                            "100天, 脫胎換骨(皮膚更新 1 個月, 肝更新 1 季...).",
-                            "哪裡痛, 就往哪裡伸展.",
-                            "身體前傾, 肩膀後張, 屁股後翹, 手肘後擺 (只有手肘用力, 其他都放鬆).",
-                            "猿猴式走路應用在平常生活中, 洗臉刷牙, 逛市場.",
-                            "把該忘的忘掉是智慧.",
-                            "健康有 五成是自己的心性造成.",
-                            "完美主義者老的快 病的早."
-                        ].map(quote => `
-                            <div class="bg-white p-5 rounded-xl border-l-4 border-brand-500 shadow-sm">
-                                <p class="text-lg font-medium text-slate-800 leading-relaxed">${quote}</p>
-                            </div>
-                        `).join('')}
-                    </div>
-                `
             }
         ];
 
@@ -607,10 +602,10 @@
         function renderTOC() {
             const list = document.getElementById('mobile-toc-list');
             list.innerHTML = chapters.map(ch => `
-                <button onclick="openChapter(${ch.id})" class="w-full flex items-center justify-between py-5 px-5 bg-white active:bg-slate-50 transition">
+                <button onclick="openChapter(${ch.id})" class="w-full flex items-center justify-between py-4 px-5 bg-white active:bg-slate-50 transition">
                     <div class="flex items-center space-x-5 text-left">
-                        <div class="w-14 h-14 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid ${ch.icon} text-2xl"></i>
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                            <i class="fa-solid ${ch.icon} text-xl"></i>
                         </div>
                         <div>
                             <span class="block font-bold text-slate-900 text-xl leading-tight">${ch.title}</span>
@@ -624,7 +619,7 @@
         function renderDrawerList() {
             const list = document.getElementById('drawer-list');
             list.innerHTML = chapters.map(ch => `
-                <button onclick="openChapter(${ch.id})" class="w-full flex items-center space-x-4 py-4 px-3 text-left rounded-lg active:bg-slate-50 text-slate-800 hover:text-brand-600 transition">
+                <button onclick="openChapter(${ch.id})" class="w-full flex items-center space-x-4 py-3.5 px-3 text-left rounded-lg active:bg-slate-50 text-slate-800 hover:text-brand-600 transition">
                     <i class="fa-solid ${ch.icon} w-8 text-center text-slate-400 text-xl"></i>
                     <span class="font-bold text-lg truncate">${ch.title}</span>
                 </button>
@@ -641,7 +636,7 @@
             
             document.getElementById('reader-content').innerHTML = `
                 <h2 class="text-3xl font-black text-slate-900 mb-2 leading-tight">${chapter.title}</h2>
-                <p class="text-base text-slate-500 mb-8 font-medium">${chapter.subtitle}</p>
+                <p class="text-base text-slate-500 mb-6 font-medium">${chapter.subtitle}</p>
                 ${chapter.content}
             `;
 
