@@ -106,25 +106,25 @@
         <!-- ==================== VIEW 1: HOME ==================== -->
         <div id="view-home" class="view-active view-transition pb-24 px-3 pt-2 space-y-2.5">
             
-            <!-- Hero Banner (標題縮小不折行，間距與高度減少 1/3) -->
+            <!-- Hero Banner -->
             <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-3 px-4 text-white shadow-md relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 opacity-10">
                     <i class="fa-solid fa-person-running text-9xl"></i>
                 </div>
                 <div class="relative z-10">
-                    <!-- 標題縮小一點、不折行 -->
-                    <h2 class="text-xl sm:text-2xl font-bold mb-1 shadow-sm tracking-tight whitespace-nowrap">葉子老師猿猴式超慢跑</h2>
+                    <!-- 標題適度縮小，確保不折行 -->
+                    <h2 class="text-lg sm:text-xl font-bold mb-1 shadow-sm tracking-tight whitespace-nowrap">葉子老師猿猴式超慢跑</h2>
                     <p class="text-xs text-brand-100 mb-2 font-medium opacity-90">完全免費 歡迎分享 | 彙編: Herman 2026.10</p>
                     
                     <div class="flex items-center space-x-3">
-                        <!-- Solid Red Heart SVG with White text "愛" (放大) -->
+                        <!-- Solid Red Heart SVG with White text "愛" -->
                         <div class="relative inline-flex items-center justify-center w-12 h-12">
                             <svg class="absolute inset-0 w-full h-full text-red-500 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
                             <span class="relative z-10 text-white font-black text-base drop-shadow-sm">愛</span>
                         </div>
-                        <!-- 善良、健康、快樂 (字體加大，移除圓圈框) -->
+                        <!-- 善良、健康、快樂 (無框大字) -->
                         <div class="flex items-center space-x-4 text-lg font-black tracking-wider text-white">
                             <span>善良</span>
                             <span>健康</span>
@@ -209,6 +209,7 @@
     </div>
 
     <script>
+        // Data Structure (已將口訣與收功法整併進初學者入門，並更名)
         const chapters = [
             {
                 id: 1,
@@ -298,11 +299,12 @@
             },
             {
                 id: 2,
-                title: "初學者懶人包",
-                subtitle: "全套練功時間與重要注意事項",
+                title: "初學者入門",
+                subtitle: "全套練功時間、口訣、收功與重要注意事項",
                 icon: "fa-list-check",
                 content: `
-                    <div class="space-y-3.5">
+                    <div class="space-y-4">
+                        <!-- 40分鐘懶人包 -->
                         <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 shadow-sm">
                             <h2 class="font-black text-brand-900 text-xl mb-2">全套練功大約 40 分鐘</h2>
                             <ul class="text-lg text-brand-800 space-y-2">
@@ -315,7 +317,71 @@
                             </ul>
                         </div>
 
-                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl shadow-sm">
+                        <!-- 口訣區塊整合 -->
+                        <div class="space-y-3.5">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
+                                    <i class="fa-solid fa-gauge-high text-3xl text-brand-500 mb-2"></i>
+                                    <h3 class="text-base text-slate-500 font-bold mb-1">跑速次數</h3>
+                                    <p class="text-brand-700 font-black text-2xl">120下/分</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
+                                    <i class="fa-solid fa-wind text-3xl text-brand-500 mb-2"></i>
+                                    <h3 class="text-base text-slate-500 font-bold mb-1">呼吸配合</h3>
+                                    <p class="text-brand-700 font-black text-xl leading-tight">右腳踏地<br>吐氣提肛</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-red-50 text-red-600 text-lg font-bold p-3.5 rounded-xl border border-red-100 text-center animate-pulse">
+                                會喘的人自行減慢或停下來等不喘了再繼續
+                            </div>
+
+                            <div class="bg-gradient-to-br from-brand-600 to-blue-600 p-4 rounded-2xl text-white shadow-sm text-center">
+                                <h3 class="text-base font-bold text-brand-200 mb-2 uppercase tracking-widest">六大姿勢口訣</h3>
+                                <p class="text-3xl font-black tracking-widest mb-1">蹬地、彈膝、翹臀</p>
+                                <p class="text-3xl font-black tracking-widest">提肛、縮腹、瞪眼</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl border border-slate-100 text-lg text-slate-700 shadow-sm space-y-2">
+                                <p>💡 <b>湧泉穴加溫</b>：利用按摩前腳掌的湧泉穴讓身體內部加溫，血熱軟化血管。</p>
+                                <p>💡 <b>提肛防下垂</b>：慢慢練到每次踏右腳就提一次，提氣防臟腑下垂陰濕。</p>
+                            </div>
+                        </div>
+
+                        <!-- 收功法區塊整合 -->
+                        <div class="space-y-3.5 pt-2">
+                            <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 text-lg text-brand-900 text-center font-bold">
+                                兩腳與肩同寬，重心往前<br>十指抓地，十指交扣掌心向外
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                                <h3 class="font-black text-brand-700 mb-2 text-xl">收功一 (標準)</h3>
+                                <div class="space-y-2 text-lg text-slate-700">
+                                    <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛。意念黃光從眉心吸到丹田鎖住。</p>
+                                    <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>意守下丹田。</p>
+                                    <p><span class="font-bold text-red-500">吐氣(6秒)：</span>手往下，縮小腹，提肛，舌頂上顎放。<span class="text-red-600 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                                <h3 class="font-bold text-brand-700 mb-2 text-xl">收功二 (適合重病/老年人)</h3>
+                                <div class="space-y-2 text-lg text-slate-700">
+                                    <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛，吸5-7分飽。意守下丹田(黃色金光)。</p>
+                                    <p><span class="font-bold text-red-500">吐氣：</span>手往下，縮小腹，提肛。<span class="text-red-600 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
+                                    <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>放。</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-brand-600 p-4 rounded-2xl text-white shadow-sm">
+                                <h3 class="font-black text-white mb-2 text-xl">收功三 (小周天進階)</h3>
+                                <div class="space-y-2 text-lg text-brand-50">
+                                    <p><b>吸氣：</b>手上舉，<b>要提肛</b>。意念引導黃光從眉心➔丹田➔尾閭➔海底輪➔頭頂360度➔舌頂下顎➔意念往下喉嚨➔丹田鎖住。</p>
+                                    <p><b>吐氣：</b>縮小腹，<b>不提肛 (肛門放掉)</b>。<span class="text-amber-300 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 注意事項區塊 -->
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl shadow-sm pt-2">
                             <h3 class="font-bold text-amber-900 text-xl mb-2 flex items-center"><i class="fa-solid fa-droplet mr-3"></i>飲水與洗澡禁忌</h3>
                             <ul class="text-amber-900 text-lg space-y-2 list-disc pl-6">                                
                                 <li><b>運動前：</b>早起空腹喝 300~500cc 溫開水後開始。(有慢性病患可先進食)</li>
@@ -342,81 +408,6 @@
             },
             {
                 id: 3,
-                title: "口訣",
-                subtitle: "次數、姿勢與呼吸法",
-                icon: "fa-person-running",
-                content: `
-                    <div class="space-y-3.5">
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
-                                <i class="fa-solid fa-gauge-high text-3xl text-brand-500 mb-2"></i>
-                                <h3 class="text-base text-slate-500 font-bold mb-1">跑速次數</h3>
-                                <p class="text-brand-700 font-black text-2xl">120下/分</p>
-                            </div>
-                            <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-center">
-                                <i class="fa-solid fa-wind text-3xl text-brand-500 mb-2"></i>
-                                <h3 class="text-base text-slate-500 font-bold mb-1">呼吸配合</h3>
-                                <p class="text-brand-700 font-black text-xl leading-tight">右腳踏地<br>吐氣提肛</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-red-50 text-red-600 text-lg font-bold p-3.5 rounded-xl border border-red-100 text-center animate-pulse">
-                            會喘的人自行減慢或停下來等不喘了再繼續
-                        </div>
-
-                        <div class="bg-gradient-to-br from-brand-600 to-blue-600 p-4 rounded-2xl text-white shadow-sm text-center">
-                            <h3 class="text-base font-bold text-brand-200 mb-2 uppercase tracking-widest">六大姿勢口訣</h3>
-                            <p class="text-3xl font-black tracking-widest mb-1">蹬地、彈膝、翹臀</p>
-                            <p class="text-3xl font-black tracking-widest">提肛、縮腹、瞪眼</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-2xl border border-slate-100 text-lg text-slate-700 shadow-sm space-y-2">
-                            <p>💡 <b>湧泉穴加溫</b>：利用按摩前腳掌的湧泉穴讓身體內部加溫，血熱軟化血管。</p>
-                            <p>💡 <b>提肛防下垂</b>：慢慢練到每次踏右腳就提一次，提氣防臟腑下垂陰濕。</p>
-                        </div>
-                    </div>
-                `
-            },
-            {
-                id: 4,
-                title: "收功法",
-                subtitle: "收納氣血與小周天",
-                icon: "fa-hands-praying",
-                content: `
-                    <div class="space-y-3.5">
-                        <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 text-lg text-brand-900 text-center font-bold">
-                            兩腳與肩同寬，重心往前<br>十指抓地，十指交扣掌心向外
-                        </div>
-                        
-                        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-black text-brand-700 mb-2 text-xl">收功一 (標準)</h3>
-                            <div class="space-y-2 text-lg text-slate-700">
-                                <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛。意念黃光從眉心吸到丹田鎖住。</p>
-                                <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>意守下丹田。</p>
-                                <p><span class="font-bold text-red-500">吐氣(6秒)：</span>手往下，縮小腹，提肛，舌頂上顎放。<span class="text-red-600 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
-                            </div>
-                        </div>
-
-                        <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-bold text-brand-700 mb-2 text-xl">收功二 (適合重病/老年人)</h3>
-                            <div class="space-y-2 text-lg text-slate-700">
-                                <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛，吸5-7分飽。意守下丹田(黃色金光)。</p>
-                                <p><span class="font-bold text-red-500">吐氣：</span>手往下，縮小腹，提肛。<span class="text-red-600 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
-                                <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>放。</p>
-                            </div>
-                        </div>
-
-                        <div class="bg-brand-600 p-4 rounded-2xl text-white shadow-sm">
-                            <h3 class="font-black text-white mb-2 text-xl">收功三 (小周天進階)</h3>
-                            <div class="space-y-2 text-lg text-brand-50">
-                                <p><b>吸氣：</b>手上舉，<b>要提肛</b>。意念引導黃光從眉心➔丹田➔尾閭➔海底輪➔頭頂360度➔舌頂下顎➔意念往下喉嚨➔丹田鎖住。</p>
-                                <p><b>吐氣：</b>縮小腹，<b>不提肛 (肛門放掉)</b>。<span class="text-amber-300 font-bold block mt-1">(如果可以延長深吐最好)</span></p>
-                            </div>
-                        </div>
-                    </div>
-                `
-            },
-            {
-                id: 5,
                 title: "訂閱YouTube",
                 subtitle: "每天早上05:50開播",
                 icon: "fa-brands fa-youtube",
@@ -436,7 +427,7 @@
                 `
             },
             {
-                id: 6,
+                id: 4,
                 title: "加入Line社群",
                 subtitle: "葉子老師健康研習營",
                 icon: "fa-brands fa-line",
@@ -469,7 +460,7 @@
                 `
             },
             {
-                id: 7,
+                id: 5,
                 title: "影片集錦",
                 subtitle: "教學連結",
                 icon: "fa-video",
