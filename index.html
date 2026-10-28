@@ -261,7 +261,7 @@
                                     "月芽6-8個最好，過多太躁，容易高血壓甲狀腺亢進，過少太虛，虛不受補",
                                     "100天，脫胎換骨(皮膚更新 1 個月, 肝更新 1 季...)",
                                     "哪裡痛，就往哪裡伸展",
-                                    "身體前傾，肩膀後張，屁股後翹，手肘後擺 (只有手肘用力，其他都放鬆)",
+                                    "身體前傾，肩膀後張, 屁股後翹, 手肘後擺 (只有手肘用力，其他都放鬆)",
                                     "猿猴式走路應用在平常生活中，洗臉刷牙，逛市場",
                                     "把該忘的忘掉，是智慧",
                                     "健康有五成是自己的心性造成",
@@ -281,171 +281,177 @@
                 title: "快速入門",
                 icon: "fa-list-check",
                 content: `
-                    <div class="space-y-3">
-                        <!-- 40分鐘懶人包 -->
-                        <div class="bg-brand-50 p-3.5 rounded-2xl border border-brand-100 shadow-sm space-y-3">
-                            <h2 class="font-black text-brand-900 text-xl mb-1">全套練功大約 40 分鐘</h2>
-                            <p class="text-base text-slate-600 font-bold">可以賴床5分鐘動一動，起床喝 300~500ml 的溫開水</p>
-                            
-                            <!-- 5項功法美化卡片 (帶YouTube連結) -->
+                    <div class="space-y-4">
+                        <!-- 1. 練功時間與前置準備 (精美藍色卡片) -->
+                        <div class="bg-gradient-to-br from-brand-50 to-blue-50 p-4 rounded-2xl border border-brand-100 shadow-sm space-y-3">
+                            <div class="flex items-center space-x-3 text-brand-900 border-b border-brand-200 pb-2">
+                                <i class="fa-solid fa-clock text-2xl text-brand-600"></i>
+                                <h2 class="font-black text-xl">全套練功時間與準備</h2>
+                            </div>
+                            <div class="space-y-2 text-slate-700 text-lg leading-relaxed">
+                                <p class="font-bold text-brand-800 bg-white/80 p-2.5 rounded-xl shadow-xs">⏳ 全套練功時間大約 <span class="text-xl text-red-600 font-black">40 分鐘</span></p>
+                                <p>• 起床賴床5分鐘動一動，喝 300~500ml 溫開水（糖尿病患者可先進食）。</p>
+                                <p>• <b>最佳時間：</b>早起（大腸經）05:50-07:00、下午（膀胱/腎經）15:00-19:00 各練1套。</p>
+                                <p>• <b>休息時間：</b>中午（心經）11:00-13:00 避免激烈運動。</p>
+                                <p>• <b>場地：</b>自家客廳或房間。<b>切勿光腳跑</b>，請在瑜珈墊上或穿運動鞋跑。</p>
+                                <p>• <b>日常保養：</b>飯後可小跑步3-5分鐘，每30-50分鐘起身揹娃娃或伸展一次。</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. 5大功法與影片指引 (質感白卡片) -->
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <div class="flex items-center space-x-3 text-slate-900 border-b border-slate-100 pb-2">
+                                <i class="fa-solid fa-person-running text-2xl text-brand-600"></i>
+                                <h2 class="font-black text-xl">功法步驟與要領影片</h2>
+                            </div>
+
                             <div class="space-y-2.5 pt-1">
                                 <!-- 1 -->
-                                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center shrink-0">1</span>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 text-lg">拉小腿筋</h4>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3 min-w-0">
+                                        <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0">1</span>
+                                        <div class="min-w-0">
+                                            <h4 class="font-bold text-slate-900 text-lg truncate">拉小腿筋</h4>
                                             <p class="text-sm text-slate-500">建議時間：2分鐘</p>
                                         </div>
                                     </div>
-                                    <a href="https://youtu.be/7ludNQ8LkvM?si=x-qL5gHwlnMYUJ0K" target="_blank" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5">
+                                    <a href="https://youtu.be/7ludNQ8LkvM?si=x-qL5gHwlnMYUJ0K" target="_blank" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5 ml-2">
                                         <i class="fa-brands fa-youtube"></i>
-                                        <span>看要領</span>
+                                        <span>看影片</span>
                                     </a>
                                 </div>
 
                                 <!-- 2 -->
-                                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center shrink-0">2</span>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 text-lg">拉大腿筋</h4>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3 min-w-0">
+                                        <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0">2</span>
+                                        <div class="min-w-0">
+                                            <h4 class="font-bold text-slate-900 text-lg truncate">拉大腿筋 (揹娃娃)</h4>
                                             <p class="text-sm text-slate-500">建議時間：3分鐘</p>
                                         </div>
                                     </div>
-                                    <a href="https://youtu.be/e0BmsP88310?si=pwj9voSFVHH434sz" target="_blank" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5">
+                                    <a href="https://youtu.be/e0BmsP88310?si=pwj9voSFVHH434sz" target="_blank" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5 ml-2">
                                         <i class="fa-brands fa-youtube"></i>
-                                        <span>看要領</span>
+                                        <span>看影片</span>
                                     </a>
                                 </div>
 
                                 <!-- 3 -->
-                                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center shrink-0">3</span>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 text-lg">原地超慢跑</h4>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3 min-w-0">
+                                        <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0">3</span>
+                                        <div class="min-w-0">
+                                            <h4 class="font-bold text-slate-900 text-lg truncate">原地超慢跑</h4>
                                             <p class="text-sm text-slate-500">30~40分鐘，不喘為原則</p>
                                         </div>
                                     </div>
-                                    <a href="https://youtu.be/sw-MtrprT_k?si=MeDwUxIXAArtC4mw" target="_blank" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5">
+                                    <a href="https://youtu.be/sw-MtrprT_k?si=MeDwUxIXAArtC4mw" target="_blank" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5 ml-2">
                                         <i class="fa-brands fa-youtube"></i>
-                                        <span>看要領</span>
+                                        <span>看影片</span>
                                     </a>
                                 </div>
 
                                 <!-- 4 -->
-                                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center shrink-0">4</span>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 text-lg">收功</h4>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3 min-w-0">
+                                        <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0">4</span>
+                                        <div class="min-w-0">
+                                            <h4 class="font-bold text-slate-900 text-lg truncate">雙手托天與收功</h4>
                                             <p class="text-sm text-slate-500">建議時間：3分鐘</p>
                                         </div>
                                     </div>
-                                    <a href="https://youtu.be/jau-s6MB2Ns?si=87uiMLhOyp8-umJj" target="_blank" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5">
+                                    <a href="https://youtu.be/jau-s6MB2Ns?si=87uiMLhOyp8-umJj" target="_blank" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5 ml-2">
                                         <i class="fa-brands fa-youtube"></i>
-                                        <span>看要領</span>
+                                        <span>看影片</span>
                                     </a>
                                 </div>
 
                                 <!-- 5 -->
-                                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-                                    <div class="flex items-center space-x-3">
-                                        <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center shrink-0">5</span>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 text-lg">笑笑功</h4>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3 min-w-0">
+                                        <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0">5</span>
+                                        <div class="min-w-0">
+                                            <h4 class="font-bold text-slate-900 text-lg truncate">笑笑功</h4>
                                             <p class="text-sm text-slate-500">身心放鬆開懷大笑</p>
                                         </div>
                                     </div>
-                                    <a href="https://youtu.be/cw4EcBIxcQo?si=ufk1km0E-GlhU8UD" target="_blank" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5">
+                                    <a href="https://youtu.be/cw4EcBIxcQo?si=ufk1km0E-GlhU8UD" target="_blank" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded-xl shadow active:scale-95 transition shrink-0 flex items-center space-x-1.5 ml-2">
                                         <i class="fa-brands fa-youtube"></i>
-                                        <span>看要領</span>
+                                        <span>看影片</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 口訣區塊整合 -->
-                        <div class="space-y-2.5">
-                            <div class="grid grid-cols-2 gap-2.5">
-                                <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center">
-                                    <i class="fa-solid fa-gauge-high text-3xl text-brand-500 mb-1"></i>
-                                    <h3 class="text-base text-slate-500 font-bold mb-0.5">跑步頻率</h3>
-                                    <p class="text-brand-700 font-black text-2xl">每分鐘140下</p>
+                        <!-- 3. 跑步頻率與呼吸節奏 (亮眼漸層卡片) -->
+                        <div class="bg-gradient-to-br from-brand-600 to-blue-600 p-4 rounded-2xl text-white shadow-sm space-y-3 text-center">
+                            <h3 class="text-base font-bold text-brand-100 uppercase tracking-widest"><i class="fa-solid fa-bolt mr-2"></i>跑速與呼吸配合</h3>
+                            <div class="grid grid-cols-2 gap-3 pt-1">
+                                <div class="bg-white/10 p-3 rounded-xl backdrop-blur-xs">
+                                    <p class="text-sm text-brand-100 font-bold">跑步頻率</p>
+                                    <p class="text-2xl font-black mt-1">每分鐘 140 下</p>
                                 </div>
-                                <div class="bg-white p-3 rounded-2xl border border-slate-100 shadow-sm text-center">
-                                    <i class="fa-solid fa-wind text-3xl text-brand-500 mb-1"></i>
-                                    <h3 class="text-base text-slate-500 font-bold mb-0.5">呼吸配合</h3>
-                                    <p class="text-brand-700 font-black text-xl leading-tight">右腳踏地<br>吐氣提肛</p>
+                                <div class="bg-white/10 p-3 rounded-xl backdrop-blur-xs">
+                                    <p class="text-sm text-brand-100 font-bold">呼吸配合</p>
+                                    <p class="text-lg font-black mt-1 leading-tight">右腳踏地<br>吐氣提肛</p>
                                 </div>
                             </div>
-                            
-                            <div class="bg-red-50 text-red-600 text-lg font-bold p-3 rounded-xl border border-red-100 text-center animate-pulse">
-                                會喘的人自行減慢或停下來等不喘了再繼續
+                            <div class="bg-red-500/90 text-white text-base font-bold p-2.5 rounded-xl animate-pulse shadow">
+                                ⚠️ 會喘的人自行減慢或停下來，等不喘了再繼續！
                             </div>
-
-                            <div class="bg-gradient-to-br from-brand-600 to-blue-600 p-3.5 rounded-2xl text-white shadow-sm text-center">
-                                <h3 class="text-base font-bold text-brand-200 mb-1 uppercase tracking-widest">姿勢口訣 (不用記)</h3>
-                                <p class="text-xl font-black tracking-widest mb-0.5">蹬地、彈膝、翹臀、提肛、縮腹、瞪眼</p>
+                            <div class="text-left bg-white/10 p-3 rounded-xl text-base space-y-1">
+                                <p class="font-black text-amber-200">六大姿勢口訣 (自然做到不用記)：</p>
+                                <p class="font-bold tracking-wide">蹬地、彈膝、翹臀、提肛、縮腹、瞪眼</p>
                             </div>
                         </div>
 
-                        <!-- 收功法區塊整合 -->
-                        <div class="space-y-2.5 pt-1">
-                            <div class="bg-brand-50 p-3.5 rounded-2xl border border-brand-100 text-lg text-brand-900 text-center font-bold leading-relaxed">
-                                收功 <br> 兩腳與肩同寬 <br>腳指微微抓地，手指交扣掌心向外
+                        <!-- 4. 收功法詳細步驟 (三階段卡片) -->
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <div class="flex items-center space-x-3 text-slate-900 border-b border-slate-100 pb-2">
+                                <i class="fa-solid fa-hands-praying text-2xl text-brand-600"></i>
+                                <h2 class="font-black text-xl">收功法詳細步驟</h2>
                             </div>
-                                                        
-                            <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
-                                <h3 class="font-bold text-brand-700 mb-1.5 text-xl">收功一</h3>
-                                <div class="space-y-1.5 text-lg text-slate-700 leading-relaxed">
-                                    <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛。意念黃光從眉心吸到丹田鎖住。</p>
-                                    <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>意守下丹田。</p>
-                                    <p><span class="font-bold text-red-500">吐氣(6秒)：</span>手往下, 縮小腹, 提肛, 舌頂上顎放。<span class="text-red-600 font-bold block mt-0.5">(如果可以延長深吐最好)</span></p>
-                                </div>
-                            </div>
+                            <p class="text-slate-700 text-base font-bold bg-brand-50 p-2.5 rounded-xl">
+                                📌 預備姿勢：兩腳與肩同寬，十根腳指微微抓地，十指交扣掌心向外。
+                            </p>
 
-                            <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
-                                <h3 class="font-bold text-brand-700 mb-1.5 text-xl">收功二 (適合重病/老年人)</h3>
-                                <div class="space-y-1.5 text-lg text-slate-700 leading-relaxed">
-                                    <p><span class="font-bold text-blue-600">吸氣(3秒)：</span>手上舉，不提肛，吸5-7分飽。意守下丹田(黃色金光)。</p>
-                                    <p><span class="font-bold text-red-500">吐氣：</span>手往下, 縮小腹, 提肛。<span class="text-red-600 font-bold block mt-0.5">(如果可以延長深吐最好)</span></p>
-                                    <p><span class="font-bold text-slate-500">憋氣(3秒)：</span>放。</p>
+                            <div class="space-y-2.5">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <h4 class="font-bold text-brand-700 text-lg mb-1">收功一 (標準)</h4>
+                                    <p class="text-slate-700 text-base"><b>吸氣(3秒)：</b>手上舉不提肛，意念黃光從眉心吸到丹田鎖住。</p>
+                                    <p class="text-slate-700 text-base"><b>憋氣(3秒)：</b>意守下丹田。</p>
+                                    <p class="text-slate-700 text-base"><b>吐氣(6秒)：</b>手往下，縮小腹提肛，舌頂上顎放（可延長深吐）。</p>
                                 </div>
-                            </div>
-                            <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
-                                <h3 class="font-bold text-brand-700 mb-1.5 text-xl">收功三 (小周天進階)</h3>                            
-                                <div class="space-y-1.5 text-lg text-slate-700 leading-relaxed">
-                                    <p><b>吸氣：</b>手上舉，<b>要提肛</b>。意念引導黃光從眉心➔丹田➔尾閭➔海底輪➔頭頂360度➔舌頂下顎➔意念往下喉嚨➔丹田鎖住。</p>
-                                    <p><b>吐氣：</b>縮小腹，<b>不提肛 (肛門放掉)</b>。<span class="text-amber-300 font-bold block mt-0.5">(如果可以延長深吐最好)</span></p>
+
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <h4 class="font-bold text-brand-700 text-lg mb-1">收功二 (適合重病/老年人)</h4>
+                                    <p class="text-slate-700 text-base"><b>吸氣(3秒)：</b>手上舉不提肛，吸5-7分飽，意守下丹田(黃金光)。</p>
+                                    <p class="text-slate-700 text-base"><b>吐氣：</b>手往下，縮小腹提肛。</p>
+                                    <p class="text-slate-700 text-base"><b>憋氣(3秒)：</b>放。</p>
+                                </div>
+
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <h4 class="font-bold text-brand-700 text-lg mb-1">收功三 (小周天進階)</h4>
+                                    <p class="text-slate-700 text-base"><b>吸氣：</b>手上舉<b>要提肛</b>。意念引導黃光由眉心➔丹田➔尾閭➔海底輪➔頭頂360度➔舌頂下顎➔意念往下喉嚨➔丹田鎖住。</p>
+                                    <p class="text-slate-700 text-base"><b>吐氣：</b>縮小腹，<b>不提肛（肛門放掉）</b>。</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 注意事項區塊 -->
-                        <div class="bg-amber-50 border border-amber-200 p-3.5 rounded-2xl shadow-sm pt-1">
-                            <h3 class="font-bold text-amber-900 text-xl mb-1.5 flex items-center"><i class="fa-solid fa-droplet mr-3"></i>飲水與洗澡禁忌</h3>
-                            <ul class="text-amber-900 text-lg space-y-1.5 list-disc pl-6 leading-relaxed">                                
-                                <li><b>運動前：</b>早起空腹喝 300~500cc 溫開水後開始。(有慢性病患可先進食)</li>
-                                <li><b class="text-red-600">運動中：頭會暈，不要逞強</b>，要停下來，幾天下來沒改善，就要去醫院作檢查。</li>
-                                <li><b>運動後：10-15分鐘內絕對不碰水！</b>體溫未降碰冷水筋脈會縮回。</li>
-                                <li>30分鐘後早餐完，可再睡回籠覺修護細胞。</li>
-                                <li>超慢跑後的熱血湧動是自癒關鍵。老人家冬天更需賴床５分鐘動動手指腳伸展熱身。</li>
-                                <li>請勿光腳跑，可在瑜珈墊上或穿運動鞋跑。</li>
+                        <!-- 5. 注意事項與環境設定 (暖黃色警示卡片) -->
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl shadow-sm space-y-3">
+                            <div class="flex items-center space-x-3 text-amber-900 border-b border-amber-200 pb-2">
+                                <i class="fa-solid fa-triangle-exclamation text-2xl text-amber-600"></i>
+                                <h2 class="font-black text-xl">重要注意事項與環境</h2>
+                            </div>
+                            <ul class="text-amber-900 text-base space-y-2 list-disc pl-5 leading-relaxed">
+                                <li><b>運動前：</b>早起空腹喝300~500cc溫開水。</li>
+                                <li><b class="text-red-600">運動中若頭暈、會喘請立刻停下來</b>，切勿逞強！</li>
+                                <li><b>運動後：</b>天熱15分鐘內、天冷10分鐘內<b>絕對不碰水</b>！等汗停、體溫下降再擦汗或洗澡。練功自然排出的精華能滋潤皮膚，建議少用肥皂沐浴乳。</li>
+                                <li>練完可再做伸展與敲丹田。30分鐘後吃完早餐可睡回籠覺修護細胞。</li>
+                                <li><b>空調設定：</b>電風扇絕對不可直吹！夏天酷熱若受不了可開冷氣，溫度調至 <b>29 度</b>。</li>
+                                <li><b>心性調整：</b>急性子、完美主義者病得早老得快！心性要內觀、要平，不要擔心怕睡不著或生病會不會好。</li>
                             </ul>
-                        </div>
-
-                        <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-bold text-slate-900 text-xl mb-1.5 flex items-center"><i class="fa-solid fa-snowflake text-brand-500 mr-3"></i>空調設定</h3>
-                            <p class="text-slate-700 text-lg leading-relaxed">電風扇不要直吹。</p>
-                            <p class="text-slate-700 text-lg leading-relaxed">夏天酷熱，真的受不了,可開冷氣, 溫度調至 29 度。</p>
-                        </div>
-
-                         <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
-                            <h3 class="font-bold text-slate-900 text-xl mb-1.5 flex items-center"><i class="fa-solid fa-brain text-rose-500 mr-3"></i>心性調整</h3>
-                            <p class="text-slate-700 text-lg mb-1 leading-relaxed">急性子、完美主義者，病得早老得快，切記切記！</p>
-                            <p class="text-slate-700 text-lg leading-relaxed">心性要內觀，要平，不要東想西想生病會不會好。</p>
                         </div>
                     </div>
                 `
@@ -474,17 +480,19 @@
                 title: "影片集錦",
                 icon: "fa-video",
                 content: `
-                    <div class="space-y-2">
-                        <div class="bg-slate-800 text-white px-3 py-2 rounded-xl shadow-sm sticky top-0 z-10">
-                            <p class="text-xs sm:text-sm text-slate-200"><i class="fa-solid fa-circle-info mr-1 text-red-400"></i>點擊下方連結直接開啟 YouTube 觀看</p>
+                    <div class="space-y-2.5">
+                        <div class="bg-slate-800 text-white p-3.5 rounded-2xl shadow-sm sticky top-0 z-10">
+                            <h2 class="font-bold text-xl"><i class="fa-solid fa-list-ul mr-3"></i>影片集</h2>
+                            <p class="text-sm text-slate-300 mt-0.5">點擊下方連結直接開啟 YouTube 觀看</p>
                         </div>
                         
-                        <div class="space-y-1.5 pb-4">
+                        <div class="space-y-2 pb-4">
                             ${[
                                 {title:"7大功效", url:"https://share.google/1jHIGmcjr9wO9lKhP"},
                                 {title:"超慢跑要領", url:"https://youtube.com/shorts/lokI4AoJdRM?si=TxzV-7UnSPm98yeg"},
                                 {title:"基本功-右腳踏地吐氣", url:"https://youtu.be/dEMtLvpfVD8?si=WneLdynySFV6pTAb"},
                                 {title:"奇經八脈、男七女八", url:"https://youtu.be/Xp3-2CAVoYc?si=ARjwlH1Esn_zbX3M"},
+                                {title:"短視頻、經脈", url:"https://youtube.com/shorts/ZKye5Tw74eE?si=ejhuMmByiTTJG0HC"},                                
                                 {title:"適合初接觸、葉子媽媽", url:"https://youtu.be/LmIATj4-k84?si=RPebOoCeiBHmPQwB"},
                                 {title:"飲食", url:"https://youtu.be/F6TPPsitiL0?si=XzawfiybZwIKj_B3"},
                                 {title:"老師夜跑", url:"https://youtu.be/SLMcbtqeIIk?si=8ZkVu-2dZb3VNTd0"},
@@ -513,7 +521,7 @@
                                 {title:"小孩、水、看不見的能量", url:"https://youtu.be/1BxFs0rQ_Jw?si=T31YL_nhDU59qSI8"},
                                 {title:"心臟問題", url:"https://youtu.be/Sfa2G3OyqnY?si=sxFUoeBbNGi0E4QW"},
                                 {title:"夜跑氣喘、發心、孝順", url:"https://youtu.be/0vnl5FtLqKo?si=V5b2ZqSYLT2kvoZI"},
-                                {title:"腸道控制大腦、敲丹田", url:"https://youtu.be/K4rOdlRnyY0?si=pVhRgsGA8f5JkL4c"},
+                                {title:"腸道大腦主宰、敲丹田", url:"https://youtu.be/K4rOdlRnyY0?si=pVhRgsGA8f5JkL4c"},
                                 {title:"筆筒刺激湧泉穴、收下巴轉頭", url:"https://youtu.be/TLpCupoTjNo?si=lBSWCjxDkSI1oSlC"},
                                 {title:"撞牆、心性、泡湯無法強筋", url:"https://youtu.be/Y1wrzDiGw8s?si=9GaeUUjqMAXiT_u4"},
                                 {title:"感恩", url:"https://youtu.be/xDIMlMo0nyY?si=5w-5QAf0vgi_U34C"},
@@ -529,13 +537,13 @@
                                 {title:"50後減肥是玩命", url:"https://youtu.be/NZUXhapvh1o?si=IIwvK7Xk4V_mmQ5L"},
                                 {title:"筋脈開全身舒暢", url:"https://youtu.be/onck1h1g5HM?si=PXBTXG4uioOzph_5"}
                             ].map(v => `
-                                <a href="${v.url}" target="_blank" class="block bg-white py-1.5 px-3 rounded-xl border border-slate-100 shadow-sm active:bg-slate-50 transition">
-                                    <div class="flex items-center space-x-2.5">
-                                        <div class="w-7 h-7 rounded-lg bg-red-50 text-red-500 flex items-center justify-center shrink-0">
-                                            <i class="fa-brands fa-youtube text-sm"></i>
+                                <a href="${v.url}" target="_blank" class="block bg-white p-3 rounded-xl border border-slate-100 shadow-sm active:bg-slate-50 transition">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-9 h-9 rounded-lg bg-red-50 text-red-500 flex items-center justify-center shrink-0 mt-0.5">
+                                            <i class="fa-brands fa-youtube text-xl"></i>
                                         </div>
                                         <div class="flex-1 min-w-0 flex items-center">
-                                            <h3 class="text-base font-bold text-slate-800 leading-tight truncate">${v.title}</h3>
+                                            <h3 class="text-lg font-bold text-slate-800 leading-tight">${v.title}</h3>
                                         </div>
                                     </div>
                                 </a>
@@ -546,7 +554,7 @@
             },
             {
                 id: 5,
-                title: "YouTube & Line",
+                title: "訂閱 YouTube & Line",
                 icon: "fa-share-nodes",
                 content: `
                     <div class="space-y-4">
