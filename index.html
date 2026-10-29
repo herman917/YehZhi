@@ -604,9 +604,14 @@
                             </button>
                         </div>
 
-                        <!-- 編輯署名 -->
-                        <div class="text-center pt-2 pb-1 text-slate-400 text-sm font-medium tracking-wide">
-                            Edited by Herman Hsiao <br> 2026/10/29 Line ID: @linger917
+                        <!-- 編輯署名與計數器 -->
+                        <div class="text-center pt-2 pb-1 space-y-1">
+                            <div class="text-slate-400 text-sm font-medium tracking-wide">
+                                Edited by Herman Hsiao <br> 2026/10/29 Line ID: @linger917
+                            </div>
+                            <div id="visitor-counter" class="text-slate-300 font-mono text-xs tracking-widest pt-1">
+                                11001
+                            </div>
                         </div>
                     </div>
                 `
@@ -620,7 +625,23 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderTOC();
             renderDrawerList();
+            initCounter();
         });
+
+        // 簡單的計數器邏輯（從 11001 開始，每次重新整理或載入會自動累加或保持紀錄）
+        function initCounter() {
+            let count = localStorage.getItem('app_visitor_count');
+            if (!count) {
+                count = 11001;
+            } else {
+                count = parseInt(count) + 1;
+            }
+            localStorage.setItem('app_visitor_count', count);
+            const counterEl = document.getElementById('visitor-counter');
+            if (counterEl) {
+                counterEl.innerText = count;
+            }
+        }
 
         // Toggle Side Drawer
         function toggleDrawer() {
