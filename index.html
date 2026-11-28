@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-TW" class="h-full">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>葉子老師猿猴式超慢跑</title>
@@ -11,7 +13,8 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts Inter & Noto Sans TC -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -40,20 +43,29 @@
     <style>
         /* 長輩友善大字體 */
         html {
-            font-size: 20px; 
+            font-size: 20px;
         }
-        body { 
-            font-family: 'Noto Sans TC', sans-serif; 
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
             -webkit-tap-highlight-color: transparent;
             overscroll-behavior-y: none;
         }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
         /* Smooth transitions for mobile views */
         .view-transition {
             transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .view-hidden {
             opacity: 0;
             pointer-events: none;
@@ -62,6 +74,7 @@
             inset: 0;
             overflow-y: auto;
         }
+
         .view-active {
             opacity: 1;
             pointer-events: auto;
@@ -71,7 +84,7 @@
             overflow-y: auto;
             z-index: 10;
         }
-        
+
         /* Glassmorphism */
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
@@ -80,19 +93,23 @@
         }
     </style>
 </head>
+
 <body class="bg-slate-50 h-full flex flex-col text-slate-800 antialiased overflow-hidden selection:bg-brand-200">
 
     <!-- Mobile App Header -->
-    <header class="glass-nav border-b border-brand-100 z-30 px-4 py-2 pt-[calc(env(safe-area-inset-top)+8px)] flex items-center justify-between shrink-0 shadow-sm">
+    <header
+        class="glass-nav border-b border-brand-100 z-30 px-4 py-2 pt-[calc(env(safe-area-inset-top)+8px)] flex items-center justify-between shrink-0 shadow-sm">
         <div class="flex items-center space-x-3">
-            <button onclick="toggleDrawer()" class="w-11 h-11 flex items-center justify-center text-slate-600 active:bg-slate-100 rounded-full">
+            <button onclick="toggleDrawer()"
+                class="w-11 h-11 flex items-center justify-center text-slate-600 active:bg-slate-100 rounded-full">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
-            <div class="w-11 h-11 rounded-full overflow-hidden border-2 border-white shadow-sm bg-brand-50 flex items-center justify-center shrink-0">
+            <div
+                class="w-11 h-11 rounded-full overflow-hidden border-2 border-white shadow-sm bg-brand-50 flex items-center justify-center shrink-0">
                 <!-- YouTube High-Res Avatar -->
                 <img src="https://yt3.googleusercontent.com/vv6Bh-b4K7sKGd20_tkqAWPztGhDU3t6cog2FoKqgNZW4NN1-BukrlKaAc-6UMZ1Ivyh10BH=s160-c-k-c0x00ffffff-no-rj"
-                     onerror="this.src='https://placehold.co/50x50/0284c7/ffffff?text=葉子'" 
-                     alt="葉子老師" class="w-full h-full object-cover">
+                    onerror="this.src='https://placehold.co/50x50/0284c7/ffffff?text=葉子'" alt="葉子老師"
+                    class="w-full h-full object-cover">
             </div>
             <div>
                 <h1 class="font-bold text-brand-900 text-sm sm:text-base leading-tight tracking-tight">
@@ -108,12 +125,13 @@
 
     <!-- Main Content Area -->
     <main class="flex-1 relative overflow-hidden bg-slate-50">
-        
+
         <!-- ==================== VIEW 1: HOME ==================== -->
         <div id="view-home" class="view-active view-transition pb-10 px-3 pt-2 space-y-2">
-            
+
             <!-- Hero Banner -->
-            <div class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-0.5 px-3 text-white shadow-md relative overflow-hidden">
+            <div
+                class="bg-gradient-to-br from-brand-600 to-blue-700 rounded-2xl py-0.5 px-3 text-white shadow-md relative overflow-hidden">
                 <div class="absolute -right-4 -top-4 opacity-10">
                     <i class="fa-solid fa-person-running text-9xl"></i>
                 </div>
@@ -121,13 +139,17 @@
                     <div class="flex items-center space-x-3">
                         <!-- Solid Red Heart SVG with White text "愛" -->
                         <div class="relative inline-flex items-center justify-center w-10 h-10 shrink-0">
-                            <svg class="absolute inset-0 w-full h-full text-red-500 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            <svg class="absolute inset-0 w-full h-full text-red-500 drop-shadow-md" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
                             </svg>
                             <span class="relative z-10 text-white font-black text-sm drop-shadow-sm">愛</span>
                         </div>
                         <!-- 善良、健康、快樂 -->
-                        <div class="flex items-center space-x-5 text-lg sm:text-xl font-black tracking-wider text-white">
+                        <div
+                            class="flex items-center space-x-5 text-lg sm:text-xl font-black tracking-wider text-white">
                             <span>善良</span>
                             <span>健康</span>
                             <span>快樂</span>
@@ -138,7 +160,8 @@
 
             <!-- Chapter List -->
             <div>
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50 mt-1" id="mobile-toc-list">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden divide-y divide-slate-50 mt-1"
+                    id="mobile-toc-list">
                     <!-- Chapters populated by JS -->
                 </div>
             </div>
@@ -147,8 +170,10 @@
         <!-- ==================== VIEW 2: READER (閱讀器) ==================== -->
         <div id="view-reader" class="view-hidden view-transition bg-white">
             <!-- Reader Header (Sticky) -->
-            <div class="sticky top-0 bg-white/95 backdrop-blur z-20 border-b border-slate-100 px-3 py-3 flex items-center justify-between shadow-sm">
-                <button onclick="switchView('home')" class="px-3 py-2 flex items-center text-slate-600 hover:text-brand-600 rounded-lg active:bg-slate-50 font-bold text-lg">
+            <div
+                class="sticky top-0 bg-white/95 backdrop-blur z-20 border-b border-slate-100 px-3 py-3 flex items-center justify-between shadow-sm">
+                <button onclick="switchView('home')"
+                    class="px-3 py-2 flex items-center text-slate-600 hover:text-brand-600 rounded-lg active:bg-slate-50 font-bold text-lg">
                     <i class="fa-solid fa-chevron-left mr-2"></i> 返回首頁
                 </button>
                 <div class="text-center flex-1 truncate pr-8">
@@ -165,17 +190,22 @@
     </main>
 
     <footer class="py-4 text-center text-xs text-slate-500 border-t border-slate-200/70">
-        <a href="https://herman917.github.io/herman-home/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-600">by Herman Hsiao</a>
+        <a href="https://herman917.github.io/herman-home/" target="_blank" rel="noopener noreferrer"
+            class="underline hover:text-brand-600">https://herman917.github.io/herman-home/</a>
     </footer>
 
     <!-- Side Drawer Overlay -->
-    <div id="drawer-overlay" onclick="toggleDrawer()" class="fixed inset-0 bg-slate-900/50 z-40 hidden transition-opacity opacity-0"></div>
-    
+    <div id="drawer-overlay" onclick="toggleDrawer()"
+        class="fixed inset-0 bg-slate-900/50 z-40 hidden transition-opacity opacity-0"></div>
+
     <!-- Side Drawer Navigation -->
-    <div id="drawer-menu" class="fixed inset-y-0 left-0 w-80 bg-white z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
-        <div class="p-4 border-b border-slate-100 bg-brand-50 pt-[calc(env(safe-area-inset-top)+16px)] flex justify-between items-center">
+    <div id="drawer-menu"
+        class="fixed inset-y-0 left-0 w-80 bg-white z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div
+            class="p-4 border-b border-slate-100 bg-brand-50 pt-[calc(env(safe-area-inset-top)+16px)] flex justify-between items-center">
             <h2 class="font-black text-brand-900 text-2xl">目錄</h2>
-            <button onclick="toggleDrawer()" class="w-10 h-10 rounded-full bg-white text-slate-600 flex items-center justify-center shadow-sm">
+            <button onclick="toggleDrawer()"
+                class="w-10 h-10 rounded-full bg-white text-slate-600 flex items-center justify-center shadow-sm">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
@@ -187,14 +217,16 @@
     <!-- Add to Desktop / Homescreen Modal or Alert -->
     <div id="install-modal" class="fixed inset-0 bg-slate-900/60 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 text-center">
-            <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+            <div
+                class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-3xl mx-auto">
                 <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
             <h3 class="text-2xl font-black text-slate-900">將 App 加入桌面捷徑</h3>
             <p id="install-instructions" class="text-slate-600 text-base leading-relaxed">
                 請依照下方提示將本網頁釘選至您的手機或電腦桌面，下次就能夠一鍵秒開！
             </p>
-            <button onclick="closeInstallModal()" class="w-full py-3.5 bg-brand-600 text-white font-bold rounded-xl shadow-md text-lg active:scale-95 transition">
+            <button onclick="closeInstallModal()"
+                class="w-full py-3.5 bg-brand-600 text-white font-bold rounded-xl shadow-md text-lg active:scale-95 transition">
                 我知道了
             </button>
         </div>
@@ -234,43 +266,43 @@
                             <h3 class="font-bold text-brand-900 mb-2 text-xl flex items-center"><i class="fa-solid fa-quote-left text-brand-500 mr-3"></i>老師經典金句語錄</h3>
                             <div class="space-y-2">
                                 ${[
-                                    "筋脈緊縮，是萬病之源",
-                                    "身體缺氧，是百病之根",
-                                    "自律神經失調，是病變之首",
-                                    "哪裡卡住了，有時自己都不知道",
-                                    "陽氣足了，身體自動會修復",
-                                    "身體沒有陽氣，吃什麼補藥、補品都沒有用(沒辦法吸收)",
-                                    "一部車子的CC數，是按照需要來設計的，人體也是，體重多少就多少",
-                                    "晚上只吃菜不吃飯，小心濕寒",
-                                    "身體濕寒，最毒!!",
-                                    "愛的症狀因練功體重變輕或指數變高不要怕，是在排毒",
-                                    "腹中食少，心中事少",                                    
-                                    "肌肉的能量是脂肪的10倍",
-                                    "虛領頂頸含胸拔背、沉肩垂肘、松腰墜胯,頭部正直,頸肌鬆弛,頭部懸起感覺",
-                                    "修復力有很多層，表層、裡層、內層、深層",
-                                    "有練，老樣子；沒練，樣子老",
-                                    "人體每個細胞有記憶力",                                    
-                                    "禪字，左邊示，右邊單，簡單表示，就是禪",
-                                    "人字兩撇，最好寫，但是最複雜的動物",
-                                    "簡單的事，重複做，你就是專家",
-                                    "心無罣礙，身體還陽，平衡，就沒事!",
-                                    "救急靠醫生，健康靠自己",
-                                    "經是主幹道，絡是微血管",
-                                    "計較是墮落的開始，比較是痛苦的深淵",
-                                    "不要當三等人：等吃飯、等吃藥、等睡覺",
-                                    "肺愛深呼吸、肝愛伸懶腰、腎愛踮腳尖",
-                                    "血管10萬公里，地球一周4萬公里，是 2.5 倍",
-                                    "人體內太空有60 兆個細胞，再加上好菌和壞菌，多達 200兆，比銀河系1000億顆星球還多",
-                                    "身體要的是平衡，陰陽平衡才會健康",
-                                    "月芽6-8個最好，過多太躁，容易高血壓甲狀腺亢進，過少太虛，虛不受補",
-                                    "100天，脫胎換骨(皮膚更新 1 個月, 肝更新 1 季...)",
-                                    "哪裡痛，就往哪裡伸展",
-                                    "身體前傾，肩膀後張, 屁股後翹, 手肘後擺 (只有手肘用力，其他都放鬆)",
-                                    "猿猴式走路應用在平常生活中，洗臉刷牙，逛市場",
-                                    "把該忘的忘掉，是智慧",
-                                    "健康有五成是自己的心性造成",
-                                    "完美主義者，老的快、病的早"
-                                ].map(quote => `
+                        "筋脈緊縮，是萬病之源",
+                        "身體缺氧，是百病之根",
+                        "自律神經失調，是病變之首",
+                        "哪裡卡住了，有時自己都不知道",
+                        "陽氣足了，身體自動會修復",
+                        "身體沒有陽氣，吃什麼補藥、補品都沒有用(沒辦法吸收)",
+                        "一部車子的CC數，是按照需要來設計的，人體也是，體重多少就多少",
+                        "晚上只吃菜不吃飯，小心濕寒",
+                        "身體濕寒，最毒!!",
+                        "愛的症狀因練功體重變輕或指數變高不要怕，是在排毒",
+                        "腹中食少，心中事少",
+                        "肌肉的能量是脂肪的10倍",
+                        "虛領頂頸含胸拔背、沉肩垂肘、松腰墜胯,頭部正直,頸肌鬆弛,頭部懸起感覺",
+                        "修復力有很多層，表層、裡層、內層、深層",
+                        "有練，老樣子；沒練，樣子老",
+                        "人體每個細胞有記憶力",
+                        "禪字，左邊示，右邊單，簡單表示，就是禪",
+                        "人字兩撇，最好寫，但是最複雜的動物",
+                        "簡單的事，重複做，你就是專家",
+                        "心無罣礙，身體還陽，平衡，就沒事!",
+                        "救急靠醫生，健康靠自己",
+                        "經是主幹道，絡是微血管",
+                        "計較是墮落的開始，比較是痛苦的深淵",
+                        "不要當三等人：等吃飯、等吃藥、等睡覺",
+                        "肺愛深呼吸、肝愛伸懶腰、腎愛踮腳尖",
+                        "血管10萬公里，地球一周4萬公里，是 2.5 倍",
+                        "人體內太空有60 兆個細胞，再加上好菌和壞菌，多達 200兆，比銀河系1000億顆星球還多",
+                        "身體要的是平衡，陰陽平衡才會健康",
+                        "月芽6-8個最好，過多太躁，容易高血壓甲狀腺亢進，過少太虛，虛不受補",
+                        "100天，脫胎換骨(皮膚更新 1 個月, 肝更新 1 季...)",
+                        "哪裡痛，就往哪裡伸展",
+                        "身體前傾，肩膀後張, 屁股後翹, 手肘後擺 (只有手肘用力，其他都放鬆)",
+                        "猿猴式走路應用在平常生活中，洗臉刷牙，逛市場",
+                        "把該忘的忘掉，是智慧",
+                        "健康有五成是自己的心性造成",
+                        "完美主義者，老的快、病的早"
+                    ].map(quote => `
                                     <div class="bg-white p-3 rounded-xl border-l-4 border-brand-500 shadow-sm">
                                         <p class="text-lg font-medium text-slate-800 leading-relaxed">${quote}</p>
                                     </div>
@@ -493,56 +525,56 @@
                         
                         <div class="space-y-1 pb-4">
                             ${[
-                                {title:"7大功效", url:"https://share.google/1jHIGmcjr9wO9lKhP"},
-                                {title:"超慢跑要領", url:"https://youtube.com/shorts/lokI4AoJdRM?si=TxzV-7UnSPm98yeg"},
-                                {title:"基本功-身體前傾、血液", url:"https://youtu.be/ZPdWxS25WAM?si=_Kbx7kpDyTKMNz_4"},
-                                {title:"初學必看、姿勢、觀念加強", url:"https://youtu.be/imBIxiaRuro?si=3kxDki92fdgc1mNo"},
-                                {title:"基本功-右腳踏地吐氣", url:"https://youtu.be/dEMtLvpfVD8?si=WneLdynySFV6pTAb"},
-                                {title:"奇經八脈、男七女八", url:"https://youtu.be/Xp3-2CAVoYc?si=ARjwlH1Esn_zbX3M"},                                
-                                {title:"適合初接觸、葉子媽媽", url:"https://youtu.be/LmIATj4-k84?si=RPebOoCeiBHmPQwB"},
-                                {title:"飲食", url:"https://youtu.be/F6TPPsitiL0?si=XzawfiybZwIKj_B3"},
-                                {title:"老師夜跑", url:"https://youtu.be/SLMcbtqeIIk?si=8ZkVu-2dZb3VNTd0"},
-                                {title:"師母心臟失衡", url:"https://youtu.be/xcsCaB8jFZ8?si=RqQtzUCHrLbW4QNp"},
-                                {title:"健身夫婦中風、頻尿", url:"https://youtu.be/hkn3QtgOjaE?si=sWNF3ReHrkPpkKJO"},
-                                {title:"返老還童領悟", url:"https://youtu.be/JIWfDPZy6ig?si=nDBVWzfU12BYDdZv"},
-                                {title:"百日築基大綱", url:"https://youtu.be/r3yqpAvNbz0?si=dGtOH6If_8f1zyj5"},
-                                {title:"早起入門", url:"https://youtu.be/LE3C1jR8Qbc?si=B_pHH0foMnKiIF3M"},
-                                {title:"郭靜純肌腱斷裂再生", url:"https://youtu.be/VPB3092WT5Y?si=AgOmSja2pw9uMOCJ"},
-                                {title:"膏荒淋巴癌、瘦、吃不胖", url:"https://youtu.be/-PGPcst1stA?si=lo_1Gh1nx4GCEn1f"},
-                                {title:"肌肉、骨架、基本功", url:"https://youtu.be/dDc0RXQheq0?si=q_-FvdCci55jdlX4"},
-                                {title:"天下病苦皆我父母", url:"https://youtu.be/wwYXt2q6g6I?si=SfQhoGc29je2HRSg"},
-                                {title:"帕金、化療72次痊癒", url:"https://youtu.be/wwYXt2q6g6I?si=SfQhoGc29je2HRSg"},
-                                {title:"吃不胖、糖尿病", url:"https://youtu.be/OGPAgo08nrM?si=CCRX4aGwTmBSs6fe"},
-                                {title:"保健品危害、病是養出來的", url:"https://youtu.be/7Ho9tJ4gN6o?si=AIzo529vRmHhGqMV"},
-                                {title:"月牙", url:"https://youtu.be/mGBOqmlMjKM?si=2p5MQK0jLyz7zY0K"},
-                                {title:"同學會顯得年輕", url:"https://youtu.be/NzTal0RqEaw?si=mJ96_1Za-Ld-8Z6m"},
-                                {title:"好轉反應", url:"https://youtu.be/pPHMeiR9zDw?si=chgHF-ayb7faLc-X"},
-                                {title:"三陰交", url:"https://youtu.be/iLw1ad5GHZQ?si=Jpz7eO-FVuDKzNZ1"},
-                                {title:"不要不好意思、斷捨離", url:"https://youtu.be/NzZsoD7th5A?si=GYnFccd0lPFui2-x"},
-                                {title:"50後的運動、老中醫", url:"https://youtu.be/S_ZtEsb-hjc?si=IMaXdlk5HZxTDJ1V"},
-                                {title:"生長遲緩、灰指甲、先天問題", url:"https://youtu.be/0EgLQZ-dxPU?si=Nmysl_Z0tKpTfkE0"},
-                                {title:"糖尿、神經傳導、膏盲、頸椎", url:"https://youtu.be/an87eevraeE?si=xL7fKbCPqsmGR0c6"},
-                                {title:"胰臟與胸椎、頸胸腰椎一直線", url:"https://youtu.be/lvvh6VDkHRA?si=NwqdvE_cPE0LUifO"},
-                                {title:"更年期、早起排毒、健康觀念", url:"https://youtu.be/9wb-anP3OdM?si=KJ5U-wmbdMYx3LzJ"},
-                                {title:"小孩、水、看不見的能量", url:"https://youtu.be/1BxFs0rQ_Jw?si=T31YL_nhDU59qSI8"},
-                                {title:"心臟問題", url:"https://youtu.be/Sfa2G3OyqnY?si=sxFUoeBbNGi0E4QW"},
-                                {title:"夜跑氣喘、發心、孝順", url:"https://youtu.be/0vnl5FtLqKo?si=V5b2ZqSYLT2kvoZI"},
-                                {title:"腸道大腦主宰、敲丹田", url:"https://youtu.be/K4rOdlRnyY0?si=pVhRgsGA8f5JkL4c"},
-                                {title:"筆筒刺激湧泉穴、收下巴轉頭", url:"https://youtu.be/TLpCupoTjNo?si=lBSWCjxDkSI1oSlC"},
-                                {title:"撞牆、心性、泡湯無法強筋", url:"https://youtu.be/Y1wrzDiGw8s?si=9GaeUUjqMAXiT_u4"},
-                                {title:"感恩", url:"https://youtu.be/xDIMlMo0nyY?si=5w-5QAf0vgi_U34C"},
-                                {title:"溫度", url:"https://youtu.be/UO_RQUFtMYg?si=O96GHhsUFgm6Mb0i"},
-                                {title:"烏龜聽著聽著都學會拉小腿筋", url:"https://youtu.be/fBYBRqpSK3k?si=SxPtf6RrAYHXyb4M"},
-                                {title:"日本人長籌秘密、良性瘤也是堵塞", url:"https://youtu.be/9novc4IZxro?si=Z4IUpqTg1W48hw9B"},
-                                {title:"良性瘤要注意、腎好了全身好", url:"https://youtu.be/p1PA6kpT_Sg?si=yNmEfUMlnTItnJsx"},
-                                {title:"四顆種子", url:"https://youtu.be/mXjW7pUmom4?si=sgE5SgOlYOoRLVaP"},
-                                {title:"帕金森", url:"https://youtu.be/3dHFaEWQTmM?si=RnMnyzbwQ9Fbblx9"},
-                                {title:"早起排毒3倍、癌症夫婦、掉髮改善", url:"https://youtu.be/KCxs_FnZYOI?si=KDh1yANxXc3ol96J"},
-                                {title:"肌少症、肌無力、手腳趾經", url:"https://youtu.be/0Ofuf7BBpsw?si=GJgeSF6M8IIMZ4HV"},
-                                {title:"婦科生理期、大周天運氣好", url:"https://youtu.be/10s8fS_Pr6Q?si=AMQfv-3v1Xfr6AAw"},
-                                {title:"50後減肥是玩命", url:"https://youtu.be/NZUXhapvh1o?si=IIwvK7Xk4V_mmQ5L"},
-                                {title:"筋脈開全身舒暢", url:"https://youtu.be/onck1h1g5HM?si=PXBTXG4uioOzph_5"}
-                            ].map(v => `
+                        { title: "7大功效", url: "https://share.google/1jHIGmcjr9wO9lKhP" },
+                        { title: "超慢跑要領", url: "https://youtube.com/shorts/lokI4AoJdRM?si=TxzV-7UnSPm98yeg" },
+                        { title: "基本功-身體前傾、血液", url: "https://youtu.be/ZPdWxS25WAM?si=_Kbx7kpDyTKMNz_4" },
+                        { title: "初學必看、姿勢、觀念加強", url: "https://youtu.be/imBIxiaRuro?si=3kxDki92fdgc1mNo" },
+                        { title: "基本功-右腳踏地吐氣", url: "https://youtu.be/dEMtLvpfVD8?si=WneLdynySFV6pTAb" },
+                        { title: "奇經八脈、男七女八", url: "https://youtu.be/Xp3-2CAVoYc?si=ARjwlH1Esn_zbX3M" },
+                        { title: "適合初接觸、葉子媽媽", url: "https://youtu.be/LmIATj4-k84?si=RPebOoCeiBHmPQwB" },
+                        { title: "飲食", url: "https://youtu.be/F6TPPsitiL0?si=XzawfiybZwIKj_B3" },
+                        { title: "老師夜跑", url: "https://youtu.be/SLMcbtqeIIk?si=8ZkVu-2dZb3VNTd0" },
+                        { title: "師母心臟失衡", url: "https://youtu.be/xcsCaB8jFZ8?si=RqQtzUCHrLbW4QNp" },
+                        { title: "健身夫婦中風、頻尿", url: "https://youtu.be/hkn3QtgOjaE?si=sWNF3ReHrkPpkKJO" },
+                        { title: "返老還童領悟", url: "https://youtu.be/JIWfDPZy6ig?si=nDBVWzfU12BYDdZv" },
+                        { title: "百日築基大綱", url: "https://youtu.be/r3yqpAvNbz0?si=dGtOH6If_8f1zyj5" },
+                        { title: "早起入門", url: "https://youtu.be/LE3C1jR8Qbc?si=B_pHH0foMnKiIF3M" },
+                        { title: "郭靜純肌腱斷裂再生", url: "https://youtu.be/VPB3092WT5Y?si=AgOmSja2pw9uMOCJ" },
+                        { title: "膏荒淋巴癌、瘦、吃不胖", url: "https://youtu.be/-PGPcst1stA?si=lo_1Gh1nx4GCEn1f" },
+                        { title: "肌肉、骨架、基本功", url: "https://youtu.be/dDc0RXQheq0?si=q_-FvdCci55jdlX4" },
+                        { title: "天下病苦皆我父母", url: "https://youtu.be/wwYXt2q6g6I?si=SfQhoGc29je2HRSg" },
+                        { title: "帕金、化療72次痊癒", url: "https://youtu.be/wwYXt2q6g6I?si=SfQhoGc29je2HRSg" },
+                        { title: "吃不胖、糖尿病", url: "https://youtu.be/OGPAgo08nrM?si=CCRX4aGwTmBSs6fe" },
+                        { title: "保健品危害、病是養出來的", url: "https://youtu.be/7Ho9tJ4gN6o?si=AIzo529vRmHhGqMV" },
+                        { title: "月牙", url: "https://youtu.be/mGBOqmlMjKM?si=2p5MQK0jLyz7zY0K" },
+                        { title: "同學會顯得年輕", url: "https://youtu.be/NzTal0RqEaw?si=mJ96_1Za-Ld-8Z6m" },
+                        { title: "好轉反應", url: "https://youtu.be/pPHMeiR9zDw?si=chgHF-ayb7faLc-X" },
+                        { title: "三陰交", url: "https://youtu.be/iLw1ad5GHZQ?si=Jpz7eO-FVuDKzNZ1" },
+                        { title: "不要不好意思、斷捨離", url: "https://youtu.be/NzZsoD7th5A?si=GYnFccd0lPFui2-x" },
+                        { title: "50後的運動、老中醫", url: "https://youtu.be/S_ZtEsb-hjc?si=IMaXdlk5HZxTDJ1V" },
+                        { title: "生長遲緩、灰指甲、先天問題", url: "https://youtu.be/0EgLQZ-dxPU?si=Nmysl_Z0tKpTfkE0" },
+                        { title: "糖尿、神經傳導、膏盲、頸椎", url: "https://youtu.be/an87eevraeE?si=xL7fKbCPqsmGR0c6" },
+                        { title: "胰臟與胸椎、頸胸腰椎一直線", url: "https://youtu.be/lvvh6VDkHRA?si=NwqdvE_cPE0LUifO" },
+                        { title: "更年期、早起排毒、健康觀念", url: "https://youtu.be/9wb-anP3OdM?si=KJ5U-wmbdMYx3LzJ" },
+                        { title: "小孩、水、看不見的能量", url: "https://youtu.be/1BxFs0rQ_Jw?si=T31YL_nhDU59qSI8" },
+                        { title: "心臟問題", url: "https://youtu.be/Sfa2G3OyqnY?si=sxFUoeBbNGi0E4QW" },
+                        { title: "夜跑氣喘、發心、孝順", url: "https://youtu.be/0vnl5FtLqKo?si=V5b2ZqSYLT2kvoZI" },
+                        { title: "腸道大腦主宰、敲丹田", url: "https://youtu.be/K4rOdlRnyY0?si=pVhRgsGA8f5JkL4c" },
+                        { title: "筆筒刺激湧泉穴、收下巴轉頭", url: "https://youtu.be/TLpCupoTjNo?si=lBSWCjxDkSI1oSlC" },
+                        { title: "撞牆、心性、泡湯無法強筋", url: "https://youtu.be/Y1wrzDiGw8s?si=9GaeUUjqMAXiT_u4" },
+                        { title: "感恩", url: "https://youtu.be/xDIMlMo0nyY?si=5w-5QAf0vgi_U34C" },
+                        { title: "溫度", url: "https://youtu.be/UO_RQUFtMYg?si=O96GHhsUFgm6Mb0i" },
+                        { title: "烏龜聽著聽著都學會拉小腿筋", url: "https://youtu.be/fBYBRqpSK3k?si=SxPtf6RrAYHXyb4M" },
+                        { title: "日本人長籌秘密、良性瘤也是堵塞", url: "https://youtu.be/9novc4IZxro?si=Z4IUpqTg1W48hw9B" },
+                        { title: "良性瘤要注意、腎好了全身好", url: "https://youtu.be/p1PA6kpT_Sg?si=yNmEfUMlnTItnJsx" },
+                        { title: "四顆種子", url: "https://youtu.be/mXjW7pUmom4?si=sgE5SgOlYOoRLVaP" },
+                        { title: "帕金森", url: "https://youtu.be/3dHFaEWQTmM?si=RnMnyzbwQ9Fbblx9" },
+                        { title: "早起排毒3倍、癌症夫婦、掉髮改善", url: "https://youtu.be/KCxs_FnZYOI?si=KDh1yANxXc3ol96J" },
+                        { title: "肌少症、肌無力、手腳趾經", url: "https://youtu.be/0Ofuf7BBpsw?si=GJgeSF6M8IIMZ4HV" },
+                        { title: "婦科生理期、大周天運氣好", url: "https://youtu.be/10s8fS_Pr6Q?si=AMQfv-3v1Xfr6AAw" },
+                        { title: "50後減肥是玩命", url: "https://youtu.be/NZUXhapvh1o?si=IIwvK7Xk4V_mmQ5L" },
+                        { title: "筋脈開全身舒暢", url: "https://youtu.be/onck1h1g5HM?si=PXBTXG4uioOzph_5" }
+                    ].map(v => `
                                 <a href="${v.url}" target="_blank" class="block bg-white py-1.5 px-3 rounded-xl border border-slate-100 shadow-sm active:bg-slate-50 transition">
                                     <div class="flex items-center space-x-2.5">
                                         <div class="w-7 h-7 rounded-lg bg-red-50 text-red-500 flex items-center justify-center shrink-0">
@@ -625,7 +657,7 @@
         ];
 
         let currentChapterId = 1;
-        let currentView = 'home'; 
+        let currentView = 'home';
         let isDrawerOpen = false;
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -653,7 +685,7 @@
         function toggleDrawer() {
             const drawer = document.getElementById('drawer-menu');
             const overlay = document.getElementById('drawer-overlay');
-            
+
             isDrawerOpen = !isDrawerOpen;
             if (isDrawerOpen) {
                 drawer.classList.remove('-translate-x-full');
@@ -669,7 +701,7 @@
         // View Switching Logic
         function switchView(viewName) {
             currentView = viewName;
-            
+
             const viewHome = document.getElementById('view-home');
             const viewReader = document.getElementById('view-reader');
             const ytIframe = document.getElementById('ch1-video');
@@ -677,12 +709,12 @@
             if (viewName === 'home') {
                 viewHome.classList.replace('view-hidden', 'view-active');
                 viewReader.classList.replace('view-active', 'view-hidden');
-                
+
                 if (ytIframe) ytIframe.src = "";
             } else if (viewName === 'reader') {
                 viewHome.classList.replace('view-active', 'view-hidden');
                 viewReader.classList.replace('view-hidden', 'view-active');
-                
+
                 viewReader.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
@@ -703,7 +735,7 @@
                 </button>
             `).join('');
         }
-        
+
         function renderDrawerList() {
             const list = document.getElementById('drawer-list');
             list.innerHTML = chapters.map(ch => `
@@ -717,11 +749,11 @@
         function openChapter(id) {
             currentChapterId = id;
             const chapter = chapters.find(c => c.id === id);
-            
-            if(isDrawerOpen) toggleDrawer();
-            
+
+            if (isDrawerOpen) toggleDrawer();
+
             document.getElementById('reader-chapter-title').innerText = chapter.title;
-            
+
             document.getElementById('reader-content').innerHTML = `
                 ${chapter.content}
             `;
@@ -740,7 +772,7 @@
         function showInstallHelp() {
             const modal = document.getElementById('install-modal');
             const instructions = document.getElementById('install-instructions');
-            
+
             const userAgent = navigator.userAgent.toLowerCase();
             if (/iphone|ipad|ipod/.test(userAgent)) {
                 instructions.innerHTML = "<b>iPhone / iPad (Safari) 操作方式：</b><br>請點擊下方工具列的 <b>「分享」</b> 按鈕（正方形帶箭頭），然後選擇 <b>「加入主畫面」</b> 即可！";
@@ -760,4 +792,5 @@
         }
     </script>
 </body>
+
 </html>
